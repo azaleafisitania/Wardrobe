@@ -1,10 +1,8 @@
-Wardrobe 
-Author: Azalea Fisitania
-Web-based application that can mix-and-match clothes using rule-based learning
-Build with Java Servlet and MongoDB
+wardrobe 
 
-The future master applicarion will include these features:
-- Clothes management
-- Mix and match
-- Scheduling, and
-- Clothes dictionary
+features:
+- view clothes (mysl)
+- add/edit/delete clothes (on progress)
+- mix and match (on progress)
+- scheduling (on progress)
+- clothes dictionary (on progress)
