@@ -1,9 +1,13 @@
 <!-- Validate if parameter is set -->
 <?php
-	if(!(isset($_GET['id']))) 
-		header('Location: clothes.php');
-	else
-		$id = $_GET['id'];
+if(!(isset($_GET['id'])))
+	header('Location: clothes.php');
+else
+	$id = $_GET['id'];
+if(!(isset($_GET['id'])))
+	header('Location: clothes.php');
+else
+	$id = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +45,7 @@
 							<div class="col-md-5 col-sm-5 col-xs-5 form-group pull-right top_search">
 								<div class="form-group">
 									<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-										<button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Delete Clothes</button>
+										<a class="btn btn-danger" href=<?php echo "api/delete-clothes.php?id=".$id; ?>><i class="fa fa-trash"></i> Delete Clothes</a>
 									</div>
 								</div>
 							</div>
@@ -55,21 +59,6 @@
 							<div class="x_panel">
 								<div class="x_title">
 									<h2><i class="fa fa-info-circle"></i> Details</h2>
-									<ul class="nav navbar-right panel_toolbox">
-										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-											<ul class="dropdown-menu" role="menu">
-												<li><a href="#">Settings 1</a>
-												</li>
-												<li><a href="#">Settings 2</a>
-												</li>
-											</ul>
-										</li>
-										<li><a class="close"><i class="fa fa-close"></i></a>
-										</li>
-									</ul>
 									<div class="clearfix"></div>
 								</div>
 								<div class="x_content clothes_photo">
@@ -77,8 +66,20 @@
 								</div>
 								<div class="x_content">
 									
-									<form class="form-horizontal form-label-left input_mask">
+									<form class="form-horizontal form-label-left input_mask" action=<?php echo "api/edit-clothes.php?id=".$id; ?> method="post" enctype="multipart/form-data">
 										<h2 class="page-header">Basic Details</h2>
+										<div class="form-group">
+											<label class="control-label col-md-3 col-sm-3 col-xs-12">Fav</label>
+											<div class="col-md-9 col-sm-9 col-xs-12 clothes_fav">
+												<!-- Fav here -->
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-md-3 col-sm-3 col-xs-12">Category</label>
+											<div class="col-md-9 col-sm-9 col-xs-12 clothes_category">
+												<!-- Category here -->
+											</div>
+										</div>
 										<div class="form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Brand</label>
 											<div class="col-md-9 col-sm-9 col-xs-12 clothes_brand">
@@ -119,7 +120,7 @@
 										<div class="ln_solid"></div>
 										<div class="form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<button type="submit" class="btn btn-white"><i class="fa fa-remove"></i> Cancel</button>
+												<a class="btn btn-default" href=<?php echo "clothes-detail.php?id=".$id; ?>><i class="fa fa-remove"></i> Cancel</a>
 												<button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Save Changes</button>
 											</div>
 										</div>
@@ -132,25 +133,26 @@
 							<div class="x_panel">
 								<div class="x_title">
 									<h2><i class="fa fa-sitemap"></i> Matches</h2>
-									<ul class="nav navbar-right panel_toolbox">
-										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-											<ul class="dropdown-menu" role="menu">
-												<li><a href="#">Settings 1</a>
-												</li>
-												<li><a href="#">Settings 2</a>
-												</li>
-											</ul>
-										</li>
-										<li><a class="close"><i class="fa fa-close"></i></a>
-										</li>
-									</ul>
 									<div class="clearfix"></div>
 								</div>
-								<div class="x_content clothes_matches">
+
+								<div class="x_content clothes_matches" id="matches">
+									<div class="form-group pull-right">
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<a class="btn btn-primary" href="#" onclick="editMatches()"><i class="fa fa-pencil-square-o"></i> Edit Matches</a>
+										</div>
+									</div>
 									<!-- Clothes matches here -->
+								</div>
+								<div class="x_content" id="edit_matches" style="display:none">
+									<div class="form-group pull-right">
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<a class="btn btn-default" href="#" onclick="showMatches()"><i class="fa fa-check"></i> Cancel</a>
+										</div>
+									</div>
+									<div class="clothes_to_match">
+										<!-- Clothes to match here -->
+									</div>
 								</div>
 							</div>
 						</div>
@@ -159,21 +161,6 @@
 							<div class="x_panel">
 								<div class="x_title">
 									<h2><i class="fa fa-bars"></i> Layers</h2>
-									<ul class="nav navbar-right panel_toolbox">
-										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-											<ul class="dropdown-menu" role="menu">
-												<li><a href="#">Settings 1</a>
-												</li>
-												<li><a href="#">Settings 2</a>
-												</li>
-											</ul>
-										</li>
-										<li><a class="close"><i class="fa fa-close"></i></a>
-										</li>
-									</ul>
 									<div class="clearfix"></div>
 								</div>
 								<div class="x_content clothes_layers">
@@ -186,21 +173,6 @@
 							<div class="x_panel">
 								<div class="x_title">
 									<h2><i class="fa fa-history"></i> History</h2>
-									<ul class="nav navbar-right panel_toolbox">
-										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-											<ul class="dropdown-menu" role="menu">
-												<li><a href="#">Settings 1</a>
-												</li>
-												<li><a href="#">Settings 2</a>
-												</li>
-											</ul>
-										</li>
-										<li><a class="close"><i class="fa fa-close"></i></a>
-										</li>
-									</ul>
 									<div class="clearfix"></div>
 								</div>
 								<div class="x_content clothes_history">
@@ -213,21 +185,6 @@
 							<div class="x_panel">
 								<div class="x_title">
 									<h2><i class="fa fa-comments"></i> Comments</h2>
-									<ul class="nav navbar-right panel_toolbox">
-										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-											<ul class="dropdown-menu" role="menu">
-												<li><a href="#">Settings 1</a>
-												</li>
-												<li><a href="#">Settings 2</a>
-												</li>
-											</ul>
-										</li>
-										<li><a class="close"><i class="fa fa-close"></i></a>
-										</li>
-									</ul>
 									<div class="clearfix"></div>
 								</div>
 								<div class="x_content clothes_comments">
@@ -262,7 +219,19 @@
 		getClothesDetail( <?php echo $id; ?> );
 		getMatches( <?php echo $id; ?> );
 		getLayers( <?php echo $id; ?> );
+
 	});
+
+	function showMatches(){
+		document.getElementById("matches").style="display:block";
+		document.getElementById("edit_matches").style="display:none";
+	}
+	function editMatches(){
+		document.getElementById("matches").style="display:none";
+		document.getElementById("edit_matches").style="display:block";
+		getClothesToMatch( <?php echo $id; ?> );
+		
+	}
 	</script>
 </body>
 

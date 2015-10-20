@@ -4,14 +4,14 @@ $category = $_GET["_category"];
 if($category=="") $category = "";
 else $category = ' WHERE category = "'.$category.'"';
 
-//Connect
+// Connect DB
 include "../db-connect.php";
 $data = array();
 
 // Select mode
 $mode = "mysql"; //or "neo4j"
 if($mode=="mysql"){
-	//select clothes
+	// Query select clothes
 	$query = "SELECT * FROM clothes $category ORDER BY category";
 	$result = mysql_query($query,$db);
 	if($result){
