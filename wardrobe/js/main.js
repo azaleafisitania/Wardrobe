@@ -1,12 +1,13 @@
-/* Main function */
 var user = [];
 var clothes = [];
 var quotes = [];
 var outfits = [];
 var categories = [];
 
+/* -------------------------- Main Functions -------------------------- */
+
 // Get categories
-function getCategories(){
+function getCategorySidebar(){
 	$.ajax({
 		url: "api/categories.php",
 		type: "POST",
@@ -23,6 +24,29 @@ function getCategories(){
 				}
 				$(".clothes-categories").append('<li><a href="clothes.php">All<span class="label pull-right">'+total_clothes+'</span></a></li>');
 				$(".clothes-categories").append(elem);
+			}
+		}
+	})
+}
+
+// Get categories for page
+function getCategory(category){
+	$.ajax({
+		url: "api/categories.php",
+		type: "GET",
+		data: { _category: category },
+		beforeSend: function(){
+		},
+		success: function(data,status){
+			if(status=="success"){
+				categories = JSON.parse(data);
+				var total_clothes = 0;
+				var elem = '';
+				for(var i=0;i<categories.length;i++){
+					total_clothes += Number(categories[i]['total']);
+					elem += '<div class="'+categories[i]['name']+'" id="'+categories[i]['name']+'" style="display:none"><h2 class="page-header"><a href="clothes.php?category='+categories[i]['name']+'">'+toTitleCase(categories[i]['name'])+'</a> ('+categories[i]['total']+')</h2></div>';
+				}
+				$(".clothes_gallery").append(elem);
 			}
 		}
 	})
@@ -53,36 +77,33 @@ function getQuotes(){
 }
 
 // Get clothes
-function getClothes(category){
+function getClothes(category,start,limit){
 	$.ajax({
 		url: "api/clothes.php",
 		type: "GET",
-		data: { _category: category },
+		data: { _category: category, _start: start, _limit: limit },
 		beforeSend: function(){
 		},
 		success: function(data,status){
 			if(status=="success"){
 				clothes = JSON.parse(data);
-				var recent_category = toTitleCase(clothes[0]['category']);
-				var elem = '';
-				elem += '<h2 class="page-header">'+recent_category+'</h2>';
-				for(var i=0;i<clothes.length;i++){
-					if(toTitleCase(clothes[i]['category'])!=recent_category){
-						recent_category = toTitleCase(clothes[i]['category']);
-						elem += '<h2 class="page-header">'+recent_category+'</h2>';
+				var elem = "";
+				var photo = "";
+				for(var i=0;i<clothes.length;i++) {
+					document.getElementById(clothes[i]['category']).style="display:block";
+					if(clothes[i]['photo']) {
+						photo = clothes[i]['photo'];
+					} else {
+						photo = "add.jpg";
 					}
-					if(clothes[i]['photo'])
-						elem += '<a href="clothes-detail.php?id='+clothes[i]['id']+'"><img width=200 style="padding: .1em; border-radius: 10px;" src="images/azalea/'+clothes[i]['photo']+'" alt="image" /></a>';
-					else
-						elem += '<a href="clothes-detail.php?id='+clothes[i]['id']+'"><img width=200 style="padding: .1em; border-radius: 10px;" src="images/azalea/add.jpg" alt="image" /></a>';
+					$("."+clothes[i]['category']+"").append('<a href="clothes-detail.php?id='+clothes[i]['id']+'"><img width=200 style="padding: .1em; border-radius: 10px;" src="images/azalea/'+photo+'" /></a>');
 				}
-				$(".clothes_gallery").append(elem);
 			}
 		}
 	})
 }
 
-// Get clothes
+// Get clothes detail
 function getClothesDetail(id){
 	$.ajax({
 		url: "api/clothes-detail.php",
@@ -108,7 +129,7 @@ function getClothesDetail(id){
 				$(".clothes_fav").append(elem);
 				// Category
 				var category;
-				if(clothes_detail[0]['category']) category = toTitleCase(clothes_detail[0]['category']);
+				if(clothes_detail[0]['category']) category = clothes_detail[0]['category'];
 				else category = "";
 				elem = '<input type="text" class="form-control" name="category" placeholder="Add category" value="'+category+'">';
 				$(".clothes_category").append(elem);
@@ -148,7 +169,8 @@ function getClothesDetail(id){
 				else occasion = "";
 				elem = '<input type="text" class="form-control" name="occasion" placeholder="Add occasion" value="'+occasion+'">';
 				$(".clothes_occasion").append(elem);
-				$(".clothes_history").append(elem);
+
+				$(".clothes_title").append('<h3><i class="fa fa-folder-open"></i> <a href="clothes.php">All Clothes</a> <i class="fa fa-angle-right"></i> <a href="clothes.php?category='+category+'">'+toTitleCase(category)+'</a> <i class="fa fa-angle-right"></i> Item '+id+'</h3>');
 			}
 		}
 	})
@@ -208,7 +230,7 @@ function getLayers(id){
 	})
 }
 
-// Get matches
+// Get clothes to match
 function getClothesToMatch(id){
 	$.ajax({
 		url: "api/clothes-to-match.php",
@@ -237,6 +259,158 @@ function getClothesToMatch(id){
 			}
 		}
 	})
+}
+
+// Get clothes for outfit
+function getClothesForOutfit(start,limit){
+	$.ajax({
+		url: "api/clothes.php",
+		type: "GET",
+		data: { _start: start, _limit: limit },
+		beforeSend: function() {
+		},
+		success: function(data,status){
+			if(status=="success") {
+				clothes = JSON.parse(data);
+				var elem = '';
+				for(var i=0;i<clothes.length;i++){
+					id = clothes[i]['id'];
+					if(clothes[i]['photo']) photo = clothes[i]['photo'];
+					else photo = "add.jpg";
+					$("."+clothes[i]['category']+"").append('<label for="clothes_'+id+'" id="clothes_'+id+'" style="opacity:0.2" onclick="fade(this.id)"><img width=200 style="padding: .1em; border-radius: 10px;" src="images/azalea/'+photo+'" /></label>&nbsp;');
+					createCheckbox("clothes_"+id,"clothes[]",id,"flat",clothes[i]['category'],clothes[i]['checked']);
+					document.getElementById(clothes[i]['category']).style="display:block";
+				}
+			}
+		}
+	})
+}
+
+// Get clothes for edit outfit
+function getClothesForEditOutfit(id, start,limit){
+	$.ajax({
+		url: "api/clothes-checked.php",
+		type: "GET",
+		data: { _id: id, _start: start, _limit: limit },
+		beforeSend: function() {
+		},
+		success: function(data,status){
+			if(status=="success") {
+				clothes = JSON.parse(data);
+				var elem = '';
+				for(var i=0;i<clothes.length;i++){
+					id = clothes[i]['id'];
+					if(clothes[i]['photo']) photo = clothes[i]['photo'];
+					else photo = "add.jpg";
+					if(clothes[i]["checked"]) {
+						$("."+clothes[i]['category']+"").append('<label for="clothes_'+id+'" id="clothes_'+id+'" style="opacity:1" onclick="fade(this.id)"><img width=200 style="padding: .1em; border-radius: 10px;" src="images/azalea/'+photo+'" /></label>&nbsp;');
+						createCheckbox("clothes_"+id,"clothes[]",id,"flat",clothes[i]['category'],clothes[i]["checked"]);
+					} else {
+						$("."+clothes[i]['category']+"").append('<label for="clothes_'+id+'" id="clothes_'+id+'" style="opacity:0.2" onclick="fade(this.id)"><img width=200 style="padding: .1em; border-radius: 10px;" src="images/azalea/'+photo+'" /></label>&nbsp;');
+						createCheckbox("clothes_"+id,"clothes[]",id,"flat",clothes[i]['category'],clothes[i]["checked"]);
+					
+					}
+					document.getElementById(clothes[i]['category']).style="display:block";
+				}
+			}
+		}
+	})
+}
+
+// Get outfits
+function getOutfits(start,limit){
+	$.ajax({
+		url: "api/outfits.php",
+		type: "GET",
+		data: { _start: start, _limit: limit },
+		beforeSend: function() {
+		},
+		success: function(data,status) {
+			if(status=="success") {
+				outfits = JSON.parse(data);
+				var elem = '';
+				var clothes = [];
+				for(var i=0;i<outfits.length;i++) {
+					elem += '<div class="col-md-12 col-sm-12 col-xs-12">';
+					elem += '<h2 class="page-header"><a href="outfit-detail.php?id='+outfits[i]['id']+'">Outfit '+outfits[i]["id"]+'</a></h2>';
+					clothes = (outfits[i]["clothes"]);
+					var photo = "";
+					for(var j=0;j<clothes.length;j++) {
+						if(clothes[j]['photo']) photo = clothes[j]['photo'];
+						else photo = "add.jpg";
+						elem += '<a href="clothes-detail.php?id='+clothes[j]['id']+'"><img width=200 style="padding: .1em; border-radius: 10px;" src="images/azalea/'+photo+'" alt="image" /></a>';
+					}
+					elem += '</div>';
+				}
+				$(".clothes_gallery").append(elem);
+			}
+		}
+	})
+}
+
+// Get clothes detail
+function getOutfitDetail(id){
+	$.ajax({
+		url: "api/outfits.php",
+		type: "GET",
+		data: { _id: id },
+		beforeSend: function(){
+		},
+		success: function(data,status){
+			if(status=="success") {
+				outfits = JSON.parse(data);
+				var elem = '';
+				var clothes = [];
+				for(var i=0;i<outfits.length;i++) {
+					elem += '<div class="col-md-12 col-sm-12 col-xs-12">';
+					clothes = (outfits[i]["clothes"]);
+					var photo = "";
+					for(var j=0;j<clothes.length;j++) {
+						if(clothes[j]['photo']) photo = clothes[j]['photo'];
+						else photo = "add.jpg";
+						elem += '<a href="clothes-detail.php?id='+clothes[j]['id']+'"><img width=200 style="padding: .1em; border-radius: 10px;" src="images/azalea/'+photo+'" alt="image" /></a>';
+					}
+					elem += '</div>';
+				}
+				$(".clothes_content").append(elem);
+				$(".clothes_title").append('<h3><i class="fa fa-folder-open"></i> <a href="outfits.php">All Outfits</a> <i class="fa fa-angle-right"></i> Outfit No '+id+'</h3>');
+			}
+		}
+	})
+}
+
+/* -------------------------- Side Functions -------------------------- */
+
+// Create div
+function createDiv(id,className,style,IDParent) {
+	var div = document.createElement("div");
+	div.id = id;
+	div.className = className;
+	div.style = style;
+	document.getElementById(IDParent).appendChild(div);
+}
+
+// Create checkbox (for image as checkbox)
+function createCheckbox(id,name,value,className,IDParent,checked) {
+	var input = document.createElement("input");
+	input.type = "checkbox";
+	input.id = id;
+	input.name = name;
+	input.value = value;
+	input.className = className;
+	input.checked = checked;
+	document.getElementById(IDParent).appendChild(input);
+	$("input[type='checkbox']").iCheck({checkboxClass: 'icheckbox_flat-green'}); //wrap with iCheck
+	$(".icheckbox_flat-green").attr({"style": "display:none"}); //hide the checkbox
+}
+
+// Fade an element
+function fade(id) {
+	if(document.getElementById(id).style.opacity=="0.2") {
+		document.getElementById(id).style.opacity="1";
+	} else if(document.getElementById(id).style.opacity=="1") {
+		document.getElementById(id).style.opacity="0.2";
+	}
 }
 
 // Title Case

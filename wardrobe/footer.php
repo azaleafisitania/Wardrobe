@@ -1,8 +1,8 @@
 				<footer>
 					<div class="">
 						<p class="pull-right">
-							<span class="lead"> <i class="fa fa-inbox"></i> Wardrobe | </span>
-							<span class="lead"> <i class="fa fa-paw"></i> Gentelella Alela!</span>
+							A clothes management application by azuchan93 | 
+							<span class="lead"> <i class="fa fa-inbox"></i> Wardrobe</span>
 						</p>
 					</div>
 					<div class="clearfix"></div>

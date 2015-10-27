@@ -1,10 +1,18 @@
 <?php
+// Check if set
+if(isset($_GET["_category"])&&($_GET["_category"]!="")) {
+	$CATEGORY = ' WHERE name = "'.$_GET["_category"].'"';	
+} else {
+	$CATEGORY = "";
+}
+
+// Connect DB
 include "../db-connect.php";
 $data = array();
 $mode = "mysql"; //or "neo4j"
 if($mode=="mysql"){
 	//select categories
-	$query = "select * from category";
+	$query = "SELECT * FROM category $CATEGORY";
 	$result = mysql_query($query,$db);
 	if($result){
 		while($row = mysql_fetch_array($result)){

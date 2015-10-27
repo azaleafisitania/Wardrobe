@@ -29,21 +29,18 @@
 							<ul class="nav side-menu">
 								<li><a href="index.php"><i class="fa fa-home"></i> Home</a>
 								</li>
-                                <li><a><i class="fa fa-plus"></i> Add Clothes</a>
+                                <li><a href="add-clothes.php"><i class="fa fa-plus"></i> Add Clothes</a>
                                 </li>
-								<li><a><i class="fa fa-folder"></i> All Clothes <span class="fa fa-chevron-down"></span></a>
+								<li><a><i class="fa fa-folder"></i> View Clothes <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu clothes-categories" style="display: none">
                                         <!-- list all clothes categories using javascript -->
 									</ul>
 								</li>
-                                <li><a><i class="fa fa-sitemap"></i> Create Outfit</a>
+                                <li><a href="create-outfit.php"><i class="fa fa-magic"></i> Create Outfit</a>
                                 </li>
-                                <li><a><i class="fa fa-magic"></i> Generate Outfit</a>
+                                <li><a><i class="fa fa-gears"></i> Generate Outfit</a>
                                 </li>
-                                <li><a><i class="fa fa-folder"></i> All Outfits <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu" style="display: none">
-                                        <!-- list all outfits from occassion (!) -->
-                                    </ul>
+                                <li><a href="outfits.php"><i class="fa fa-folder"></i> View Outfits</a>
                                 </li>
 							</ul>
 						</div>
@@ -57,10 +54,6 @@
 										<!-- list all clothes categories (!) -->
 									</ul>
 								</li>
-								<li><a><i class="fa fa-child"></i> About </a>
-								</li>
-								<li><a><i class="fa fa-paper-plane"></i> Feedback </a>
-								</li>
 							</ul>
 						</div>
 
@@ -69,14 +62,14 @@
 
 					<!-- /menu footer buttons -->
 					<div class="sidebar-footer hidden-small">
-						<a data-toggle="tooltip" data-placement="top" title="Settings">
+						<a href="settings.php" data-toggle="tooltip" data-placement="top" title="Settings">
 							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
 						</a>
-						<a data-toggle="tooltip" data-placement="top" title="FullScreen">
-							<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+						<a href="about.php" data-toggle="tooltip" data-placement="top" title="About">
+							<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
 						</a>
-						<a data-toggle="tooltip" data-placement="top" title="Refresh">
-							<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> <!-- update database --> 
+						<a onclick="feedback.php" data-toggle="tooltip" data-placement="top" title="Feedback">
+							<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
 						</a>
 						<a href="login.php" data-toggle="tooltip" data-placement="top" title="Logout">
 							<span class="glyphicon glyphicon-off" aria-hidden="true"></span>

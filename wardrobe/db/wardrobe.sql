@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2015 at 02:21 PM
+-- Generation Time: Oct 27, 2015 at 11:16 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -205,7 +205,7 @@ INSERT INTO `clothes` (`id`, `category`, `photo`, `brand`, `fav`, `color`, `patt
 (20, 'tops', 'C360_2015-08-03-09-27-28-036.jpg', 'Flashy', 1, 'White, Orange', 'Print', 'HelloFest', '', NULL, ''),
 (21, 'tops', 'C360_2015-04-18-15-01-50-043.jpg', 'Novel Mice', 1, 'Green', 'Plain, Floral', 'Matahari Department Store', '', NULL, ''),
 (22, 'tops', 'C360_2015-08-03-09-20-18-062.jpg', '', 1, 'White', 'Plain', '', '', NULL, ''),
-(23, 'Tops', 'C360_2015-04-26-11-06-04-070.jpg', 'Hassenda', 1, 'Beige, Red', 'Tartan Check', 'Matahari', 'Formal, Casual', 0, ''),
+(23, 'tops', 'C360_2015-04-26-11-06-04-070.jpg', 'Hassenda', 1, 'Beige, Red', 'Tartan Check', 'Matahari', 'Formal, Casual', 0, ''),
 (24, 'tops', 'C360_2015-04-07-01-30-36-092.jpg', 'Carina Swarovski', 0, 'Light blue, Light pink', 'Plain, Floral', 'Given', '', NULL, ''),
 (25, 'tops', 'C360_2015-05-31-14-21-32-227.jpg', 'Novel Mice', 0, 'Pink, Blue', 'Floral', 'Matahari Department Store', '', NULL, ''),
 (26, 'tops', 'C360_2015-04-26-12-15-09-237.jpg', 'Triset', 1, 'Beige', 'Tartan check', 'Matahari Department Store', '', NULL, ''),
@@ -216,7 +216,7 @@ INSERT INTO `clothes` (`id`, `category`, `photo`, `brand`, `fav`, `color`, `patt
 (32, 'tops', 'C360_2015-04-07-01-28-33-813.jpg', 'Rodeo', 1, 'Red, White', 'Tartan check', 'Matahari Department Store', '', NULL, ''),
 (33, 'tops', 'C360_2015-04-18-16-52-38-874.jpg', '', 1, 'White, Purple', 'Floral', 'Given', '', NULL, ''),
 (34, 'tops', 'C360_2015-06-07-12-08-04-986.jpg', 'Boy''s Room', 1, 'White', 'Plain', 'Pasar Salman', '', NULL, ''),
-(35, 'tops', 'C360_2015-08-03-09-30-11-990.jpg', 'Dust', 1, 'Brown, White', 'Floral', 'Matahari Department Store', '', NULL, ''),
+(35, 'tops', 'C360_2015-08-03-09-30-11-990.jpg', 'Dust', 1, 'Brown, White', 'Floral', 'Matahari Department Store', 'Formal, Casual', 0, ''),
 (36, 'tops', 'C360_2015-04-26-12-13-22-006.jpg', 'Graphis', 0, 'Beige', 'Plain', 'Matahari Department Store', '', NULL, ''),
 (37, 'tops', 'C360_2015-03-22-16-15-57-495.jpg', 'Novel Mice', 1, 'Black', 'Plain, Floral', 'Matahari Department Store', '', NULL, ''),
 (38, 'tops', 'C360_2015-08-03-09-31-37-518.jpg', 'Triset', 0, 'Brown', 'Stripes', 'Matahari Department Store', '', NULL, ''),
@@ -250,7 +250,7 @@ INSERT INTO `clothes` (`id`, `category`, `photo`, `brand`, `fav`, `color`, `patt
 (68, 'accessories', 'C360_2015-07-31-10-55-24-097.jpg', 'n/a', 1, 'Pink', 'Plain', 'Stroberi', '', NULL, ''),
 (69, 'accessories', 'C360_2015-07-31-10-53-37-245.jpg', 'n/a', 1, 'Maroon red', 'Plain', 'Bunga', '', NULL, ''),
 (70, 'accessories', 'C360_2015-06-14-10-45-37-811.jpg', 'n/a', 1, 'White', 'Crochet', 'Handmade', '', NULL, ''),
-(71, 'Accessories', 'C360_2015-04-27-06-57-25-322.jpg', 'N/a', 1, 'Bronze, White', 'Plain', 'Pasar Seni Itb 2014', 'Formal, Casual', 0, ''),
+(71, 'accessories', 'C360_2015-04-27-06-57-25-322.jpg', 'N/a', 1, 'Bronze, White', 'Plain', 'Pasar Seni Itb 2014', 'Formal, Casual', 0, ''),
 (72, 'accessories', 'C360_2015-04-27-07-00-21-762.jpg', 'n/a', 1, 'Bronze, White, Pink, Blue', 'Plain', 'Pasar Seni ITB 2014', '', NULL, ''),
 (73, 'accessories', 'C360_2015-06-14-10-46-16-536.jpg', 'n/a', 0, 'Gray', 'Plain', 'Stroberi', '', NULL, ''),
 (74, 'accessories', 'C360_2015-06-14-11-05-12-837.jpg', 'n/a', 1, 'Red, Brown', 'Stripes', 'Stroberi', '', NULL, ''),
@@ -265,7 +265,7 @@ INSERT INTO `clothes` (`id`, `category`, `photo`, `brand`, `fav`, `color`, `patt
 (83, 'accessories', 'C360_2015-08-14-08-11-03-440.jpg', 'n/a', 1, 'Pink, Light pink, light ora', 'Polka dot', 'BIP', '', NULL, ''),
 (91, 'bags', 'C360_2015-06-22-10-07-43-517.jpg', 'n/a', 1, 'Green, Bronze', 'Plain', 'BIP', 'Formal', NULL, ''),
 (92, 'bags', 'C360_2015-06-18-11-57-18-455.jpg', 'Calais Tea', 1, 'White, Black, Brown', 'Print', 'Calais Tea', 'Casual', NULL, ''),
-(93, 'Bags', 'C360_2015-06-18-11-41-12-433.jpg', 'The Sac', 1, 'Brown', 'Plain', 'Cihampelas Walk', 'Formal, Casual', 0, ''),
+(93, 'bags', 'C360_2015-06-18-11-41-12-433.jpg', 'The Sac', 1, 'Brown', 'Plain', 'Cihampelas Walk', 'Formal, Casual', 0, ''),
 (94, 'bags', 'C360_2015-06-18-11-37-11-963.jpg', 'Cat''s Club', 0, 'White', 'Plain', 'Gramedia Merdeka', 'Casual', NULL, ''),
 (95, 'bags', 'C360_2015-06-18-11-32-49-577.jpg', 'n/a', 1, 'Pink, Deep red', 'Stripes', 'Gasibu', 'Formal', NULL, ''),
 (96, 'bags', 'C360_2015-06-18-11-26-10-144.jpg', 'n/a', 0, 'Pink, White', 'Print', 'n/a', 'Casual', NULL, ''),
@@ -314,7 +314,6 @@ INSERT INTO `clothes` (`id`, `category`, `photo`, `brand`, `fav`, `color`, `patt
 (175, 'jackets', 'C360_2015-09-29-09-17-57-881.jpg', 'Spirit', 1, 'Pink, Gray', 'Plain', 'Given', 'Casual', NULL, 'Like a cool girl''s jacket'),
 (176, 'jackets', 'C360_2015-10-11-14-57-54-611.jpg', 'Zara Knit', 1, 'Red, White', 'Knit', 'Given', 'Casual, Formal', NULL, NULL),
 (177, 'jackets', 'C360_2015-09-29-09-29-14-910.jpg', 'Cardinal Femme', 0, 'Beige', 'Plaid', 'Matahari', 'Formal, Casual', NULL, NULL),
-(181, 'shoes', 'C360_2015-06-14-10-23-18-196.jpg', 'Connexion', 1, 'Brown', 'Laced', 'Matahari', 'Formal', NULL, ''),
 (182, 'shoes', 'C360_2015-06-14-10-11-38-413.jpg', 'Crocs', 0, '{Casual}', 'Deep pink', 'Plain', 'n/a', NULL, ''),
 (183, 'shoes', 'C360_2015-06-14-10-09-08-854.jpg', 'Connexion', 1, 'Red:Brick', 'Plain, Bow', 'Matahari', 'Casual', NULL, ''),
 (184, 'shoes', 'C360_2015-06-14-10-10-14-192.jpg', 'St. Yves', 1, 'Black, Gray', 'Plain, Bow', 'Matahari', 'Casual', NULL, ''),
@@ -329,7 +328,7 @@ INSERT INTO `clothes` (`id`, `category`, `photo`, `brand`, `fav`, `color`, `patt
 (199, 'socks', 'C360_2015-06-14-10-29-19-872.jpg', 'n/a', 1, 'White, Green', 'Argyle', 'Pasar Salman', 'Casual', NULL, ''),
 (200, 'socks', 'C360_2015-06-16-08-42-27-891.jpg', 'n/a', 0, 'White, Black', 'Polka dot', 'Pasar Salman', 'Casual', NULL, ''),
 (301, 'underwears', 'C360_2015-04-18-16-47-33-326.jpg', 'Wacoal', 1, 'White', 'Plain, Laced', 'Matahari', 'Formal,Casual', NULL, ''),
-(302, 'underwears', 'C360_2015-04-18-16-49-26-446.jpg', 'Wacoal', 0, 'Brown', 'Plain', 'Matahari', 'Formal,Casual', NULL, ''),
+(302, 'underwears', 'C360_2015-04-18-16-49-26-446.jpg', 'Wacoal', 0, 'Brown', 'Plain', 'Matahari', 'Formal,casual', 0, ''),
 (303, 'underwears', 'C360_2015-04-18-17-57-27-743.jpg', 'Wacoal', 0, 'White', 'Plain', 'Matahari', 'Formal,Casual', NULL, ''),
 (304, 'underwears', 'C360_2015-06-07-11-03-15-414.jpg', 'Sorella', 1, 'Salmon Pink', 'Plain', 'Matahari', 'Formal,Casual', NULL, ''),
 (305, 'underwears', 'C360_2015-07-31-10-44-51-037.jpg', 'Venna', 1, 'Brown', 'Plain', 'Ladies Shop', 'Formal, Casual, Sport', NULL, ''),
@@ -353,7 +352,7 @@ INSERT INTO `clothes` (`id`, `category`, `photo`, `brand`, `fav`, `color`, `patt
 (323, 'tops', 'C360_2015-09-29-09-47-49-808.jpg', 'Mint', 1, 'Pink salmon', 'Plain', 'Matahari', 'Casual, Formal', NULL, 'A blouse with an interesting cut!'),
 (324, 'tops', 'C360_2015-10-11-15-11-26-177.jpg', 'Arjuna Weda', 1, 'Brown', 'Batik', 'Matahari', 'Casual, Formal', 250000, 'My first stylish batik tops!'),
 (330, 'bottoms', 'C360_2015-10-11-15-20-08-177.jpg', NULL, 1, 'Black', 'Plain', 'Pasar Salman', 'Formal', 7500, 'My first span skirt\r\n'),
-(777, 'tops', NULL, '', NULL, '', '', '', '', 0, NULL);
+(331, 'shoes', 'C360_2015-06-14-10-17-30-735.jpg', 'Connexion', 0, 'Laced', 'Matahari', '', 'Formal', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -362,9 +361,44 @@ INSERT INTO `clothes` (`id`, `category`, `photo`, `brand`, `fav`, `color`, `patt
 --
 
 CREATE TABLE IF NOT EXISTS `creates` (
-  `id_clothes` int(255) NOT NULL,
-  `id_outfit` int(255) NOT NULL
+  `id_outfit` int(255) NOT NULL,
+  `id_clothes` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `creates`
+--
+
+INSERT INTO `creates` (`id_outfit`, `id_clothes`) VALUES
+(2, 61),
+(2, 175),
+(2, 183),
+(2, 321),
+(4, 75),
+(4, 97),
+(4, 109),
+(4, 184),
+(4, 1),
+(5, 70),
+(5, 98),
+(5, 184),
+(5, 192),
+(5, 6),
+(6, 77),
+(6, 78),
+(6, 79),
+(6, 98),
+(6, 103),
+(6, 183),
+(6, 30),
+(7, 54),
+(7, 91),
+(7, 107),
+(7, 331),
+(7, 3),
+(3, 110),
+(3, 184),
+(3, 191);
 
 -- --------------------------------------------------------
 
@@ -493,7 +527,54 @@ INSERT INTO `matches` (`id_clothes1`, `id_clothes2`, `score`) VALUES
 (30, 77, NULL),
 (30, 92, NULL),
 (321, 98, NULL),
-(321, 61, NULL);
+(321, 61, NULL),
+(4, 101, NULL),
+(4, 184, NULL),
+(324, 101, NULL),
+(46, 98, NULL),
+(46, 101, NULL),
+(46, 108, NULL),
+(46, 61, NULL),
+(46, 97, NULL),
+(46, 93, NULL),
+(46, 102, NULL),
+(46, 107, NULL),
+(46, 175, NULL),
+(46, 184, NULL),
+(6, 101, NULL),
+(6, 109, NULL),
+(6, 98, NULL),
+(6, 93, NULL),
+(6, 97, NULL),
+(323, 71, NULL),
+(323, 101, NULL),
+(47, 108, NULL),
+(47, 175, NULL),
+(47, 79, NULL),
+(47, 78, NULL),
+(47, 77, NULL),
+(47, 184, NULL),
+(50, 101, NULL),
+(50, 79, NULL),
+(50, 61, NULL),
+(50, 184, NULL),
+(34, 57, NULL),
+(34, 71, NULL),
+(34, 97, NULL),
+(34, 98, NULL),
+(34, 110, NULL),
+(34, 101, NULL),
+(34, 102, NULL),
+(34, 184, NULL),
+(34, 183, NULL),
+(34, 318, NULL),
+(34, 103, NULL),
+(35, 70, NULL),
+(35, 97, NULL),
+(35, 101, NULL),
+(35, 102, NULL),
+(35, 184, NULL),
+(51, 316, NULL);
 
 -- --------------------------------------------------------
 
@@ -506,6 +587,18 @@ CREATE TABLE IF NOT EXISTS `outfits` (
   `total_score` int(255) NOT NULL,
   `user_rating` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `outfits`
+--
+
+INSERT INTO `outfits` (`id`, `total_score`, `user_rating`) VALUES
+(2, 0, 0),
+(3, 0, 0),
+(4, 0, 0),
+(5, 0, 0),
+(6, 0, 0),
+(7, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -599,7 +692,6 @@ CREATE TABLE IF NOT EXISTS `shoes` (
 --
 
 INSERT INTO `shoes` (`id`, `type`) VALUES
-(181, 'Wedges'),
 (182, 'Flats'),
 (183, 'Wedges'),
 (184, 'Flats');

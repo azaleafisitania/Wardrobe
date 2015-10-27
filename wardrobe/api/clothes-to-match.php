@@ -34,7 +34,7 @@ if($mode=="mysql"){
 	}
 
 	// Query select clothes
-	$query = "SELECT * FROM clothes";
+	$query = "SELECT * FROM clothes ORDER BY category";
 	$result = mysql_query($query,$db);
 	if($result) {
 		while($row = mysql_fetch_array($result)) {

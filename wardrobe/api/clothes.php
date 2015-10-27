@@ -1,18 +1,27 @@
 <?php
 // Check if set
-$category = $_GET["_category"];
-if($category=="") $category = "";
-else $category = ' WHERE category = "'.$category.'"';
+if(isset($_GET["_category"])&&($_GET["_category"]!="")) {
+	$CATEGORY = ' WHERE category = "'.$_GET["_category"].'"';	
+} else {
+	$CATEGORY = "";
+}
+if(isset($_GET["_limit"])) {
+	$LIMIT = "LIMIT ".$_GET["_start"].",".$_GET["_limit"];
+} else {
+	$LIMIT = "";
+}
 
 // Connect DB
 include "../db-connect.php";
 $data = array();
 
-// Select mode
 $mode = "mysql"; //or "neo4j"
+
+// Mode MySQL
 if($mode=="mysql"){
 	// Query select clothes
-	$query = "SELECT * FROM clothes $category ORDER BY category";
+	$query = "SELECT id,photo,fav,category FROM clothes $CATEGORY ORDER BY category $LIMIT";
+	//echo $query;
 	$result = mysql_query($query,$db);
 	if($result){
 		while($row = mysql_fetch_array($result)){
@@ -29,8 +38,12 @@ if($mode=="mysql"){
 	}else{
 		die('{"status":404}');
 	}
+
+// Mode Neo4j
 }else if($mode=="neo4j"){
 	//select clothes
+
+// No mode selected
 }else{
 	die('{"status":412},"msg":"must choose MySQL or Neo4j"');
 }

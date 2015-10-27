@@ -1,9 +1,7 @@
 <!-- Validate if parameter is set -->
 <?php
-	if(!isset($_GET['category'])) 
-		$category = "";
-	else
-		$category = $_GET['category'];
+if(!isset($_GET['category'])) $category = "";
+else $category = $_GET['category'];
 ?>
 
 <!DOCTYPE html>
@@ -33,8 +31,8 @@
 			<div class="right_col" role="main">
 				<div class="">
 					<div class="page-title">
-						<div class="title_left">
-							<h3><i class="fa fa-folder-open"></i> All Clothes</h3>
+						<div class="title_left clothes_title">
+							<!-- Clothes title here -->
 						</div>
 
 						<div class="title_right">
@@ -57,24 +55,15 @@
 								<div class="x_title">
 									<h2><i class="fa fa-photo"></i> Gallery</h2>
 									<ul class="nav navbar-right panel_toolbox">
-										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-											<ul class="dropdown-menu" role="menu">
-												<li><a href="#">Settings 1</a>
-												</li>
-												<li><a href="#">Settings 2</a>
-												</li>
-											</ul>
-										</li>
-										<li><a class="close"><i class="fa fa-close"></i></a>
-										</li>
+										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
 									</ul>
 									<div class="clearfix"></div>
 								</div>
 								<div class="x_content clothes_gallery">
 									<!-- Clothes gallery here -->
+								</div>
+								<div id="ajax_load" style="display:none">
+									<center><img src="images/ajax-loader.gif" /></center>
 								</div>
 							</div>
 						</div>
@@ -90,17 +79,27 @@
 
 	</div>
 
-	<div id="custom_notifications" class="custom-notifications dsp_none">
-		<ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
-		</ul>
-		<div class="clearfix"></div>
-		<div id="notif-group" class="tabbed_notifications"></div>
-	</div>
-
 	<?php include "script.php"; ?>
 	<script>
+	// Load first batch of data
+	start = 0; 
+	limit = 20;
 	$(document).ready(function () {
-		getClothes("<?php echo $category; ?>");
+		$(".clothes_title").append('<h3><i class="fa fa-folder-open"></i> <a href="clothes.php">Clothes</a> <i class="fa fa-angle-right"></i> <?php echo ucfirst($category); ?></h3>');
+		getCategory("<?php echo $category; ?>");
+		getClothes("<?php echo $category; ?>",start,limit);
+	});
+
+	// Load next batches when hit bottom, endless scroll
+	$(window).scroll(function() {
+		if($(window).scrollTop() == $(document).height() - $(window).height()) {
+			document.getElementById("ajax_load").style="display:block";
+			setTimeout(function(){
+				start = start+limit;
+				getClothes("<?php echo $category; ?>",start,limit);
+				document.getElementById("ajax_load").style="display:none";
+			},100);
+		}
 	});
 	</script>
 </body>

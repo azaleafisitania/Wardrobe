@@ -4,17 +4,13 @@ if(!(isset($_GET['id'])))
 	header('Location: clothes.php');
 else
 	$id = $_GET['id'];
-if(!(isset($_GET['id'])))
-	header('Location: clothes.php');
-else
-	$id = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<?php include "meta-css.php"; ?>
-	<title>Clothes Item #<?php echo $id; ?> | Wardrobe </title>
+	<title>Clothes Item <?php echo $id; ?> | Wardrobe </title>
 </head>
 
 
@@ -37,8 +33,8 @@ else
 			<div class="right_col" role="main">
 				<div class="">
 					<div class="page-title">
-						<div class="title_left">
-							<h3><i class="fa fa-folder-open"></i> <a href="clothes.php">All Clothes</a> <i class="fa fa-angle-right"></i> Clothes Item #<?php echo $id; ?></h3>
+						<div class="title_left clothes_title">
+							<!-- Title Here -->
 						</div>
 
 						<div class="title_right">
@@ -68,6 +64,12 @@ else
 									
 									<form class="form-horizontal form-label-left input_mask" action=<?php echo "api/edit-clothes.php?id=".$id; ?> method="post" enctype="multipart/form-data">
 										<h2 class="page-header">Basic Details</h2>
+										<div class="form-group">
+												<label class="control-label col-md-3 col-sm-3 col-xs-12">Photo</label>
+												<div class="col-md-9 col-sm-9 col-xs-12">
+													<input type="file" name="file" id="file" accept="application/jpg">
+												</div>
+											</div>
 										<div class="form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Fav</label>
 											<div class="col-md-9 col-sm-9 col-xs-12 clothes_fav">
@@ -144,10 +146,10 @@ else
 									</div>
 									<!-- Clothes matches here -->
 								</div>
-								<div class="x_content" id="edit_matches" style="display:none">
+								<div class="x_content" id="cancel" style="display:none">
 									<div class="form-group pull-right">
 										<div class="col-md-12 col-sm-12 col-xs-12">
-											<a class="btn btn-default" href="#" onclick="showMatches()"><i class="fa fa-check"></i> Cancel</a>
+											<a class="btn btn-default" href="#" onclick="cancelMatches()"><i class="fa fa-remove"></i> Cancel</a>
 										</div>
 									</div>
 									<div class="clothes_to_match">
@@ -215,6 +217,7 @@ else
 
 	<?php include "script.php"; ?>
 	<script>
+	// On ready function
 	$(document).ready(function () {
 		getClothesDetail( <?php echo $id; ?> );
 		getMatches( <?php echo $id; ?> );
@@ -222,15 +225,17 @@ else
 
 	});
 
-	function showMatches(){
+	// Show-hide button cancel
+	function cancelMatches(){
 		document.getElementById("matches").style="display:block";
-		document.getElementById("edit_matches").style="display:none";
+		document.getElementById("cancel").style="display:none";
 	}
+
+	// Show-hide button edit matches
 	function editMatches(){
 		document.getElementById("matches").style="display:none";
-		document.getElementById("edit_matches").style="display:block";
-		getClothesToMatch( <?php echo $id; ?> );
-		
+		document.getElementById("cancel").style="display:block";
+		getClothesToMatch( <?php echo $id; ?> );	
 	}
 	</script>
 </body>
