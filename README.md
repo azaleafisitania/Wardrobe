@@ -24,13 +24,11 @@ On Working Features:
 
 2. Match clothes
 
-	a. View: MySQL (done), Neo4j (wip)
+	a. View: MySQL, Neo4j (done)
 
-	b. Add: MySQL (done), Neo4j (wip)
+	b. Add: MySQL, Neo4j (done)
 
-	c. Edit: MySQL (done), Neo4j (wip)
-
-	d. Remove: MySQL (done), Neo4j (wip)
+	c. Remove: MySQL, Neo4j (done)
 
 3. Outfit
 
