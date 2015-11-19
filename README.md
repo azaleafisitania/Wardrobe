@@ -12,8 +12,11 @@ On Working Features:
 	d. Dataset: MySQL, Neo4j (done)
 1. Clothes
 	a. View: MySQL, Neo4j (done)
+
 	b. Add: MySQL, Neo4j (done)
+
 	c. Edit: MySQL, Neo4j (done)
+
 	d. Delete: MySQL, Neo4j (done)
 2. Matching/Layer clothes
 	a. View: MySQL (done), Neo4j (wip)
