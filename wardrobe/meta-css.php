@@ -14,9 +14,15 @@
 <link href="css/animate.min.css" rel="stylesheet">
 
 <!-- Custom styling plus plugins -->
-<link href="css/switchery/switchery.min.css" rel="stylesheet">
 <link href="css/icheck/flat/green.css" rel="stylesheet">
+<link href="css/switchery/switchery.min.css" rel="stylesheet">
+
 <link href="css/custom.css" rel="stylesheet">
+
+<!-- ion_range -->
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/ion.rangeSlider.css" />
+<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
 
 <script src="js/jquery.min.js"></script>
 

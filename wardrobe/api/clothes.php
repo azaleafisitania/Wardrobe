@@ -1,50 +1,86 @@
 <?php
-// Check if set
-if(isset($_GET["_category"])&&($_GET["_category"]!="")) {
-	$CATEGORY = ' WHERE category = "'.$_GET["_category"].'"';	
-} else {
-	$CATEGORY = "";
-}
-if(isset($_GET["_limit"])) {
-	$LIMIT = "LIMIT ".$_GET["_start"].",".$_GET["_limit"];
-} else {
-	$LIMIT = "";
-}
+// Session
+session_start();
+$username = $_SESSION['username'];
 
-// Connect DB
-include "../db-connect.php";
+// Check parameter
+if(isset($_GET["limit"])) $LIMIT = "LIMIT ".$_GET["start"].",".$_GET["limit"];
+else $LIMIT = "";
+
+include "../db-connect.php"; // Connect
 $data = array();
 
-$mode = "mysql"; //or "neo4j"
-
 // Mode MySQL
-if($mode=="mysql"){
-	// Query select clothes
-	$query = "SELECT id,photo,fav,category FROM clothes $CATEGORY ORDER BY category $LIMIT";
-	//echo $query;
+if($_SESSION['db_mode']=="MySQL") {
+	// Check parameter
+	if(isset($_GET["category"])&&($_GET["category"]!="")) {
+		$CATEGORY = "AND category = '".$_GET["category"]."'";	
+	} else {
+		$CATEGORY = "";
+	}
+	// MySQL query SELECT
+	$query = "SELECT id, photo, fav, category, owner FROM clothes WHERE owner = '".$username."' $CATEGORY ORDER BY category $LIMIT";
 	$result = mysql_query($query,$db);
-	if($result){
-		while($row = mysql_fetch_array($result)){
+	// Result
+	if($result) {
+		while($row = mysql_fetch_array($result)) {
+			// Photo
+			if(($row['photo'])&&(file_exists("../images/".$username."/".$row['photo']))) {
+				$photo = "images/".$username."/".$row['photo'];
+			} else {
+				$photo = "images/Photo Here.jpg";
+			}
+			// Push data
 			array_push($data, array(
 				"id" => $row["id"],
-				"photo" => $row["photo"],
+				"photo" => $photo,
 				"fav" => $row["fav"],
-				"category" => $row["category"]
-				)
-			);
+				"category" => $row["category"],
+				"owner" => $row["owner"]
+			));
 		}
-		//output dalam JSON
-		echo json_encode($data);
-	}else{
-		die('{"status":404}');
+	// Fail
+	} else {
+		error_log('[Wardrobe][ERROR] MySQL query SELECT ('.__FILE__.' line '.__LINE__.')');
 	}
 
-// Mode Neo4j
-}else if($mode=="neo4j"){
-	//select clothes
-
-// No mode selected
-}else{
-	die('{"status":412},"msg":"must choose MySQL or Neo4j"');
+// Neo4j
+} else if($_SESSION['db_mode']=="Neo4j") {
+	// Check parameter
+	if(isset($_GET["category"])&&($_GET["category"]!="")) {
+		$CATEGORY = "AND n.category = ".$_GET["category"];	
+	} else {
+		$CATEGORY = "";
+	}
+	// Cypher query MATCH
+	$query = "MATCH (u:User)-[:OWN]->(n:Clothes) WHERE u.username = '".$username."' $CATEGORY RETURN n, LABELS(n)";
+	$response = $client->sendCypherQuery($query)->getRows();
+	$clothes_all = $response['n'];
+	$categories_all = $response['LABELS(n)'];
+	// Result
+	if($clothes_all) {
+		for($i=0;$i<sizeof($clothes_all);$i++) {
+			$clothes = $clothes_all[$i];
+			$category = $categories_all[$i][1]; 
+			if(($clothes['photo'])&&(file_exists("../images/".$username."/".$clothes['photo']))) {
+				$photo = "images/".$username."/".$clothes['photo'];
+			} else {
+				$photo = "images/Photo Here.jpg";
+			}
+			// Push data
+			array_push($data, array(
+				"id" => $clothes["name"],
+				"photo" => $photo,
+				"fav" => $clothes["fav"],
+				"category" => $category
+			));
+		}
+	// Fail
+	} else {
+		error_log('[Wardrobe][ERROR] Cypher query SELECT ('.__FILE__.' line '.__LINE__.')');
+	}
 }
+
+// Output dalam JSON
+echo json_encode($data);
 ?>

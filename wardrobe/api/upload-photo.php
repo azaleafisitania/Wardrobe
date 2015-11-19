@@ -1,38 +1,35 @@
 <?php
-$allowedExts = array("jpeg", "jpg", "png","gif");
-$extension = end(explode(".", $_FILES["file"]["name"]));
 $uploadSuccess = 0;
+$allowedExts = array("jpeg","jpg","JPG","JPEG","png","PNG","GIF","gif");
+$extension = end(explode(".", $_FILES["file"]["name"]));
 
-// Check extension
+// Check if file extension is valid
 if (in_array($extension, $allowedExts)) {
-	// Check if uploaded
+	// Valid
+	// Check if upload error
 	if ($_FILES["file"]["error"] > 0) {
-		echo "Upload file error code#" . $_FILES["file"]["error"] . "<br>";
+		// Upload error
+		error_log('[Wardrobe] '.__FILE__.' line '.__LINE__.' : "photo upload error code '.$_FILES["file"]["error"].'"');
 	} else {
+		
 		//echo "Upload: " . $_FILES["file"]["name"] . "<br>";
 		//echo "Type: " . $_FILES["file"]["type"] . "<br>";
 		//echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 		//echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
-		
-		// Check if exists
-		if (file_exists("../images/azalea/" . $_FILES["file"]["name"])) {
-		?>
-			<script>
-			alert("File already exists");
-			</script>
-		<?php
-		} else {
-			// Move from temp to desired directory
-			move_uploaded_file($_FILES["file"]["tmp_name"],"../images/azalea/" . $_FILES["file"]["name"]);
-			//echo "Stored in: " . "images/azalea/" . $_FILES["file"]["name"];
+
+		move_uploaded_file($_FILES["file"]["tmp_name"],"../images/".$username."/".$_FILES["file"]["name"]); // Move from xampp/php/tmp to desired directory
+		if(file_exists("../images/".$username."/" . $_FILES["file"]["name"])) {
+			// Result
+			$photo = $_FILES["file"]["name"]; // Photo name
+			$blob_image = file_get_contents("../images/".$username."/".$_FILES["file"]["name"]); // BLOB version
+			//echo '<img src="data:image/jpg;base64,'.$blob_image_from_db.'"/>'; // Display BLOB to image
 			$uploadSuccess = 1;
+		} else {
+			error_log('[Wardrobe] '.__FILE__.' line '.__LINE__.' : "move uploaded file error"');
 		}
 	}
+// File extension not valid
 } else {
-	?>
-		<script>
-		alert("Invalid file type");
-		</script>
-	<?php
-	}
+	error_log('[Wardrobe] '.__FILE__.' line '.__LINE__.' : "invalid file type"');
+}
 ?>

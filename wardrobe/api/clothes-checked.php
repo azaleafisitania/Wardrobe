@@ -1,33 +1,25 @@
 <?php
-// Check if set
-if(isset($_GET["_id"])) {
-	$id_outfit = $_GET["_id"];	
-} else {
-	die('{"status":404},"msg":"Outfit id not selected"');
-}
-if(isset($_GET["_limit"])&&isset($_GET["_start"])) {
-	$LIMIT = "LIMIT ".$_GET["_start"].",".$_GET["_limit"];
-} else {
-	$LIMIT = "";
-}
-// Connect DB
-include "../db-connect.php";
-$data = array();
-
-$mode = "mysql"; //or "neo4j"
+// Preparations
+if(isset($_GET["id"])) $id_outfit = $_GET["id"];
+error_log('[Wardrobe Error] '.__FILE__.' line '.__LINE__.' : "outfit id not set"');
+if(isset($_GET["limit"])&&isset($_GET["start"]))  $LIMIT = "LIMIT ".$_GET["start"].",".$_GET["limit"];
+else $LIMIT = "";
+session_start(); // Session
+$username = $_SESSION['username'];
+include "../db-connect.php"; // Connect
+$data = array(); // Data
 
 // Mode MySQL
-if($mode=="mysql"){
-	// Query select clothes in outfit
+if($_SESSION['db_mode']=="MySQL") {
+	// Query SELECT, get clothes id(s) of outfit
 	$checked_clothes = array();
 	$query = "SELECT id_clothes FROM creates WHERE id_outfit = '$id_outfit'";
 	$result = mysql_query($query,$db);
 	while($row = mysql_fetch_array($result)) {
 		array_push($checked_clothes, $row["id_clothes"]);
 	}
-		
-	// Query select clothes
-	$query = "SELECT id,photo,fav,category FROM clothes ORDER BY category $LIMIT";
+	// Query SELECT all clothes
+	$query = "SELECT id,photo,category FROM clothes WHERE owner = '$username' ORDER BY category $LIMIT";
 	$result = mysql_query($query,$db);
 	if($result) {
 		while($row = mysql_fetch_array($result)) {
@@ -36,27 +28,29 @@ if($mode=="mysql"){
 			} else {
 				$checked = "";
 			}
+			// Photo
+			if(($row['photo'])&&(file_exists("../images/".$username."/".$row['photo']))) {
+				$photo = "images/".$username."/".$row['photo'];
+			} else {
+				$photo = "images/Photo Here.jpg";
+			}
+			// Push data
 			array_push($data, array(
 				"id" => $row["id"],
-				"photo" => $row["photo"],
-				"fav" => $row["fav"],
+				"photo" => $photo,
 				"category" => $row["category"],
 				"checked" => $checked
-				)
-			);
+			));
 		}
-		//output dalam JSON
-		echo json_encode($data);
-	}else{
-		die('{"status":404}');
+	} else {
+		error_log('[Wardrobe Error] '.__FILE__.' line '.__LINE__.' : "query select clothes error"');
 	}
 
-// Mode Neo4j
-}else if($mode=="neo4j"){
+// Neo4j
+} else if($_SESSION['db_mode']=="Neo4j") {
 	//select clothes
-
-// No mode selected
-}else{
-	die('{"status":412},"msg":"must choose MySQL or Neo4j"');
 }
+
+// Output dalam JSON
+echo json_encode($data);
 ?>

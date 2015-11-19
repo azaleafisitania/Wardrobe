@@ -15,16 +15,16 @@
 		<div id="wrapper">
 			<div id="login" class="animate form">
 				<section class="login_content">
-					<form>
+					<form action="api/login.php" method="post">
 						<h1>Login</h1>
 						<div>
-							<input type="text" class="form-control" placeholder="Username" required="" />
+							<input type="text" class="form-control" name="username" placeholder="Username" required="" />
 						</div>
 						<div>
-							<input type="password" class="form-control" placeholder="Password" required="" />
+							<input type="password" class="form-control" name="password" placeholder="Password" required="" />
 						</div>
 						<div>
-							<a class="btn btn-default submit" href="index.php">Log in</a>
+							<button class="btn btn-default submit">Log in</button>
 							<a class="reset_pass" href="#">Lost your password?</a>
 						</div>
 						<div class="clearfix"></div>
@@ -36,7 +36,7 @@
 							<div class="clearfix"></div>
 							<br />
 							<div>
-								<h1><i class="fa fa-inbox" style="font-size: 26px;"></i> Wardrobe</h1>
+								<h1><i class="fa fa-umbrella" style="font-size: 26px;"></i> Wardrobe</h1>
 
 								<p>©2015 All Rights Reserved</p>
 							</div>
@@ -48,7 +48,7 @@
 			</div>
 			<div id="register" class="animate form">
 				<section class="login_content">
-					<form>
+					<form action="api/register.php" method="post">
 						<h1>Create Account</h1>
 						<div>
 							<input type="text" class="form-control" placeholder="Username" required="" />
@@ -71,7 +71,7 @@
 							<div class="clearfix"></div>
 							<br />
 							<div>
-								<h1><i class="fa fa-inbox" style="font-size: 26px;"></i> Wardrobe</h1>
+								<h1><i class="fa fa-umbrella" style="font-size: 26px;"></i> Wardrobe</h1>
 
 								<p>©2015 All Rights Reserved</p>
 							</div>

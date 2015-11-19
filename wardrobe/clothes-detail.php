@@ -1,10 +1,21 @@
-<!-- Validate if parameter is set -->
 <?php
-if(!(isset($_GET['id'])))
-	header('Location: clothes.php');
-else
+session_start();
+
+// Check session user
+if(!isset($_SESSION['username'])) {
+    header("Location: login.php");
+}
+
+// Validate if parameters is set
+if(isset($_GET['id'])) {
 	$id = $_GET['id'];
+} else {
+	header('Location: clothes.php');
+} 
+if(isset($_GET['success'])) $success = $_GET['success'];
+else $success = 0;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,13 +32,9 @@ else
 
 		<div class="main_container">
 
-			<!-- sidebar -->
-			<?php include "sidebar.php"; ?>
-			<!-- /sidebar -->
-
-			<!-- top navigation -->
-            <?php include "top-navigation.php"; ?>
-			<!-- /top navigation -->
+			<!-- navigation -->            
+            <?php include "navigation.php"; ?>
+            <!-- /navigation -->
 
 			<!-- page content -->
 			<div class="right_col" role="main">
@@ -118,6 +125,12 @@ else
 												<!-- Occasion here -->
 											</div>
 										</div>
+										<div class="form-group">
+											<label class="control-label col-md-3 col-sm-3 col-xs-12">Owner</label>
+											<div class="col-md-9 col-sm-9 col-xs-12 clothes_owner">
+												<!-- Owner here -->
+											</div>
+										</div>
 										<h2 class="page-header">Spesific Details</h2>
 										<div class="ln_solid"></div>
 										<div class="form-group">
@@ -141,7 +154,7 @@ else
 								<div class="x_content clothes_matches" id="matches">
 									<div class="form-group pull-right">
 										<div class="col-md-12 col-sm-12 col-xs-12">
-											<a class="btn btn-primary" href="#" onclick="editMatches()"><i class="fa fa-pencil-square-o"></i> Edit Matches</a>
+											<a class="btn btn-primary" onclick="editMatches()"><i class="fa fa-pencil-square-o"></i> Edit Matches</a>
 										</div>
 									</div>
 									<!-- Clothes matches here -->
@@ -149,7 +162,7 @@ else
 								<div class="x_content" id="cancel" style="display:none">
 									<div class="form-group pull-right">
 										<div class="col-md-12 col-sm-12 col-xs-12">
-											<a class="btn btn-default" href="#" onclick="cancelMatches()"><i class="fa fa-remove"></i> Cancel</a>
+											<a class="btn btn-default" onclick="cancelMatches()"><i class="fa fa-remove"></i> Cancel</a>
 										</div>
 									</div>
 									<div class="clothes_to_match">
@@ -165,8 +178,23 @@ else
 									<h2><i class="fa fa-bars"></i> Layers</h2>
 									<div class="clearfix"></div>
 								</div>
-								<div class="x_content clothes_layers">
+								<div class="x_content clothes_layers" id="layers">
+									<div class="form-group pull-right">
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<a class="btn btn-primary" onclick="editLayers()"><i class="fa fa-pencil-square-o"></i> Edit Layers</a>
+										</div>
+									</div>
 									<!-- Clothes layers here -->
+								</div>
+								<div class="x_content" id="cancel_layer" style="display:none">
+									<div class="form-group pull-right">
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<a class="btn btn-default" onclick="cancelLayers()"><i class="fa fa-remove"></i> Cancel</a>
+										</div>
+									</div>
+									<div class="clothes_to_layer">
+										<!-- Clothes to layer here -->
+									</div>
 								</div>
 							</div>
 						</div>
@@ -179,19 +207,6 @@ else
 								</div>
 								<div class="x_content clothes_history">
 									<!-- Clothes history here -->
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="x_panel">
-								<div class="x_title">
-									<h2><i class="fa fa-comments"></i> Comments</h2>
-									<div class="clearfix"></div>
-								</div>
-								<div class="x_content clothes_comments">
-									<!-- Clothes detail here -->
-									On progress
 								</div>
 							</div>
 						</div>
@@ -219,23 +234,42 @@ else
 	<script>
 	// On ready function
 	$(document).ready(function () {
-		getClothesDetail( <?php echo $id; ?> );
-		getMatches( <?php echo $id; ?> );
-		getLayers( <?php echo $id; ?> );
-
+		getClothesDetail( <?php echo '"'.$id.'"'; ?> );
+		getMatches( <?php echo '"'.$id.'"'; ?> );
+		getLayers( <?php echo '"'.$id.'"'; ?> );
 	});
-
-	// Show-hide button cancel
-	function cancelMatches(){
+	// Show-hide button cancel matches
+	function cancelMatches() {
 		document.getElementById("matches").style="display:block";
 		document.getElementById("cancel").style="display:none";
 	}
-
 	// Show-hide button edit matches
-	function editMatches(){
+	function editMatches() {
 		document.getElementById("matches").style="display:none";
 		document.getElementById("cancel").style="display:block";
-		getClothesToMatch( <?php echo $id; ?> );	
+		getClothesToMatch( <?php echo '"'.$id.'"'; ?> );	
+	}
+	// Show-hide button cancel matches
+	function cancelLayers() {
+		document.getElementById("layers").style="display:block";
+		document.getElementById("cancel_layer").style="display:none";
+	}
+
+	// Show-hide button edit matches
+	function editLayers(){
+		document.getElementById("layers").style="display:none";
+		document.getElementById("cancel_layer").style="display:block";
+		getClothesToLayer( <?php echo '"'.$id.'"'; ?> );	
+	}
+
+
+	// Notification
+	if(<?php echo $success ?>) {
+		new PNotify({
+			title: 'Wonderful!',
+			text: 'You have successfully add this clothes',
+			type: 'success'
+		});
 	}
 	</script>
 </body>

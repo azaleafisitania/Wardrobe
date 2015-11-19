@@ -1,20 +1,17 @@
 <?php
-// Check parameter
+// Preparations
 if (isset($_POST["clothes"])) {
 	$clothes_ids = $_POST["clothes"];
-	//echo $clothes_ids;
 } else {
+	error_log('[Wardrobe Error] '.__FILE__.' line '.__LINE__.' : ids clothes not set');
 	header("Location: ../create-outfit.php");
 }
+session_start(); // Session
+include "../db-connect.php"; // Connect
 
-//Connect DB
-include "../db-connect.php";
-
-// Select mode
-$mode = "mysql"; //or "neo4j"
-if($mode=="mysql") {
-	
-	// Query get max id
+// MySQL
+if($_SESSION['db_mode']=="MySQL") {
+	// Query SELECT get new id
 	$query = "SELECT max(id) FROM outfits";
 	$result = mysql_query($query,$db);
 	if($result) {
@@ -23,23 +20,29 @@ if($mode=="mysql") {
 	} else {
 		$id = 1;
 	}
+	// Query INSERT new outfit
 	$query = "INSERT INTO outfits(id) VALUES ('".$id."')";
 	$result = mysql_query($query,$db);
 	if($result) {
 		for($i=0;$i<sizeof($clothes_ids);$i++) {
+			// Query INSERT new creates
 			$query = "INSERT INTO creates(id_outfit, id_clothes) VALUES ('".$id."','".$clothes_ids[$i]."')";
 			$result = mysql_query($query,$db);
 			if(!$result) {
-				die('{"status":404},"msg":"Failed to link new outfit with clothes"');
+				error_log('[Wardrobe Error] '.__FILE__.' line '.__LINE__.' : query insert clothes-outfit relationship error');
+				header('Location: ../outfits.php?');
 			}
 		}
-		header('Location: ../outfits.php?id='.$id);
 	} else {
-		die('{"status":404},"msg":"Failed to insert new outfit"');
+		error_log('[Wardrobe Error] '.__FILE__.' line '.__LINE__.' : query insert outfit error');
+		header('Location: ../outfits.php?');
 	}
-} else if($mode=="neo4j") {
-	//select clothes
-} else {
-	die('{"status":412},"msg":"Must choose MySQL or Neo4j"');
+
+// Neo4j
+} else if($_SESSION['db_mode']=="Neo4j") {
+	// Query SELECT get new id
 }
+
+// Continue
+header('Location: ../outfit-detail.php?id='.$id);
 ?>

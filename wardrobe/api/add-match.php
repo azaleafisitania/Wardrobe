@@ -1,33 +1,28 @@
-
-
-
 <?php
-// Check if set
+// Preparations
 if(isset($_GET["id1"])&&isset($_GET["id2"])) {
 	$id1 = $_GET["id1"];
 	$id2 = $_GET["id2"];
+} else {
+	error_log('[Wardrobe Error] '.__FILE__.' line '.__LINE__.' : "clothes ids not set"');
 }
-else 
-	die('{"status":404},"msg":"Clothes id not selected"');
-
-//Connect
-include "../db-connect.php";
+include "../db-connect.php"; //Connect
 $data = array();
 
-// Select mode
-$mode = "mysql"; //or "neo4j"
-if($mode=="mysql"){
-	// Query update matches
+// MySQL
+if($_SESSION['db_mode']=="MySQL") {
+	// Query INSERT, new matches
 	$query = "INSERT INTO matches(id_clothes1, id_clothes2) VALUES ('$id1','$id2')";
 	$result = mysql_query($query,$db);
-	if($result) {
-		header('Location: ../clothes-detail.php?id='.$id1);
-	} else {
-		die('{"status":404},"msg":"Failed to insert data"');
+	if(!$result) {
+		error_log('[Wardrobe Error] '.__FILE__.' line '.__LINE__.' : "query insert matches error"');
 	}
-}else if($mode=="neo4j"){
-	//select clothes
-}else{
-	die('{"status":412},"msg":"Must choose MySQL or Neo4j"');
+
+// Neo4j	
+} else if($_SESSION['db_mode']=="Neo4j") {
+	// Query INSERT, new matches
 }
+
+// Back
+header('Location: ../clothes-detail.php?id='.$id1);
 ?>

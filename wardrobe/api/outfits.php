@@ -1,57 +1,61 @@
 <?php
-if(isset($_GET["_id"])) {
-	$ID = "WHERE id = ".$_GET["_id"];
-} else {
-	$ID = "";
-}
-// Check if set
-if(isset($_GET["_limit"])&&isset($_GET["_start"])) {
-	$LIMIT = "LIMIT ".$_GET["_start"].",".$_GET["_limit"];
-} else {
-	$LIMIT = "";
-}
-
-// Connect DB
-include "../db-connect.php";
+// Preparations
+if(isset($_GET["limit"])&&isset($_GET["start"])) $LIMIT = "LIMIT ".$_GET["start"].",".$_GET["limit"];
+else $LIMIT = "";
+session_start(); // Session
+$username = $_SESSION['username'];
+include "../db-connect.php"; // Connect
 $data = array();
 
-// Select mode
-$mode = "mysql"; //or "neo4j"
-if($mode=="mysql"){
-	// Query select outfit ids
+// MySQL
+if($_SESSION['db_mode']=="MySQL") {
+	// Query SELECT id outfits & clothes 
 	$outfits = array();
-	$query = "SELECT id FROM outfits $ID $LIMIT";
+	$clothes = array();
+	$query = "SELECT DISTINCT outfits.id, id_clothes, photo, category, owner FROM outfits INNER JOIN creates INNER JOIN clothes WHERE outfits.id=creates.id_outfit AND creates.id_clothes=clothes.id AND clothes.owner = '".$username."' ORDER BY outfits.id";
 	$result = mysql_query($query,$db);
+	// Push data
 	if($result) {
-		while($row = mysql_fetch_array($result)){
-			$id = $row['id'];
-			// Query select clothes
-			$clothes = array();
-			$query2 = "SELECT id_clothes, id_outfit, photo, category FROM creates INNER JOIN clothes WHERE id_outfit='$id' AND creates.id_clothes=clothes.id ORDER BY category";
-			$result2 = mysql_query($query2,$db);
-			if($result2) {
-				while($row2 = mysql_fetch_array($result2)) {
-					array_push($clothes, array(
-						"id" => $row2["id_clothes"],
-						"photo" => $row2["photo"],
-						"category" => $row2["category"])
-					);
-				}
-			} else {
-				die('{"status":404},"msg":"Unable to access clothes data"');			
+		$row = mysql_fetch_array($result);
+		$id_outfit = $row['id']; // First outfit
+		mysql_data_seek($result, 0);
+		while($row = mysql_fetch_array($result)) {
+			// Push outfit
+			if($row['id']!=$id_outfit) {
+				array_push($outfits, array(
+					"id" => $id_outfit,
+					"clothes" => $clothes
+				));
+				$id_outfit = $row['id']; // Next outfit
+				$clothes = array();
 			}
-			array_push($outfits, array(
-				"id" => $id,
-				"clothes" => $clothes)
-			);
+			// Check photo
+			if(($row['photo'])&&(file_exists("../images/".$username."/".$row['photo']))) {
+				$photo = "images/".$username."/".$row['photo'];
+			} else {
+				$photo = "images/Photo Here.jpg";
+			}
+			// Push clothes
+			array_push($clothes, array(
+				"id" => $row["id_clothes"],
+				"photo" => $photo,
+				"category" => $row["category"],
+				"owner" => $row["owner"]
+				));
 		}
-		// Output dalam JSON
-		echo json_encode($outfits);
+		array_push($outfits, array(
+			"id" => $id_outfit,
+			"clothes" => $clothes
+		));
 	} else {
-		die('{"status":404},"msg":"Unable to access outfits data"');
+		error_log('[Wardrobe Error] '.__FILE__.' line '.__LINE__.' : query select outfit and clothes error');		
 	}
-} else if($mode=="neo4j") {
-} else {
-	die('{"status":412},"msg":"Must choose MySQL or Neo4j"');
+
+// Neo4j
+} else if($_SESSION=="Neo4j") {
+
 }
+
+// Output dalam JSON
+echo json_encode($outfits);
 ?>

@@ -1,3 +1,10 @@
+<?php
+// Preparations
+session_start();
+if(!isset($_SESSION['username'])) header("Location: login.php");
+else $username = $_SESSION['username'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +20,9 @@
 
 		<div class="main_container">
 
-			<!-- sidebar -->
-			<?php include "sidebar.php"; ?>
-			<!-- /sidebar -->
-
-			<!-- top navigation -->
-			<?php include "top-navigation.php"; ?>
-			<!-- /top navigation -->
+			<!-- navigation -->            
+            <?php include "navigation.php"; ?>
+            <!-- /navigation -->
 
 			<!-- page content -->
 			<div class="right_col" role="main">
@@ -59,9 +62,6 @@
 										<!-- Clothes gallery here -->
 									</div>
 								</div>
-								<div id="ajax_load" style="display:none">
-									<center><img src="images/ajax-loader.gif" /></center>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -78,23 +78,8 @@
 
 	<?php include "script.php"; ?>
 	<script>
-	// Load first batch of data
-	start = 0; 
-	limit = 5;
 	$(document).ready(function () {
-		getOutfits(start,limit);
-	});
-
-	// Load next batches when hit bottom, endless scroll
-	$(window).scroll(function() {
-		if($(window).scrollTop() == $(document).height() - $(window).height()) {
-			document.getElementById("ajax_load").style="display:block";
-			setTimeout(function(){
-				start = start+limit;
-				getOutfits(start,limit);
-				document.getElementById("ajax_load").style="display:none";
-			},100);
-		}
+		getOutfits();
 	});
 	</script>
 </body>

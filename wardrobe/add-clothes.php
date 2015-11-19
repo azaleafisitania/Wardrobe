@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['username'])) header("Location: login.php");
+if(isset($_GET['category'])) $category = $_GET['category'];
+else $category = "";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +21,9 @@
 
 		<div class="main_container">
 
-			<!-- sidebar -->
-			<?php include "sidebar.php"; ?>
-			<!-- /sidebar -->
-
-			<!-- top navigation -->
-            <?php include "top-navigation.php"; ?>
-			<!-- /top navigation -->
+			<!-- navigation -->            
+            <?php include "navigation.php"; ?>
+            <!-- /navigation -->
 
 			<!-- page content -->
 			<div class="right_col" role="main">
@@ -57,7 +61,7 @@
 											<div class="form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12">Photo</label>
 												<div class="col-md-9 col-sm-9 col-xs-12">
-													<input type="file" name="file" id="file" accept="application/jpg">
+													<input type="file" name="file" id="file" accept="application/jpg" required>
 												</div>
 											</div>
 											<div class="form-group">
@@ -69,7 +73,7 @@
 											<div class="form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12">Category</label>
 												<div class="col-md-9 col-sm-9 col-xs-12">
-													<input type="text" class="form-control" name="category" placeholder="Add category" value="">
+													<input type="text" class="form-control" name="category" placeholder="Add category" value=<?php echo "$category"?>>
 												</div>
 											</div>
 											<div class="form-group">
@@ -106,6 +110,12 @@
 												<label class="control-label col-md-3 col-sm-3 col-xs-12">Occasion</label>
 												<div class="col-md-9 col-sm-9 col-xs-12">
 													<input type="text" class="form-control" name="occasion" placeholder="Add occasion(s)" value="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-md-3 col-sm-3 col-xs-12">Owner</label>
+												<div class="col-md-9 col-sm-9 col-xs-12">
+													<input type="text" class="form-control" name="owner" placeholder="Add owner" value=<?php echo $_SESSION['username'] ?> disabled>
 												</div>
 											</div>
 											<h2 class="page-header">Spesific Details</h2>

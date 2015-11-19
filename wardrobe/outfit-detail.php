@@ -1,9 +1,9 @@
-<!-- Validate if parameter is set -->
 <?php
-if(!(isset($_GET['id'])))
-	header('Location: outfits.php');
-else
-	$id = $_GET['id'];
+// Preparations
+session_start(); // Session
+if(!isset($_SESSION['username'])) header("Location: login.php");
+if(!isset($_GET['id']))	header('Location: outfits.php');
+else $id = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -21,13 +21,9 @@ else
 
 		<div class="main_container">
 
-			<!-- sidebar -->
-			<?php include "sidebar.php"; ?>
-			<!-- /sidebar -->
-
-			<!-- top navigation -->
-			<?php include "top-navigation.php"; ?>
-			<!-- /top navigation -->
+			<!-- navigation -->            
+            <?php include "navigation.php"; ?>
+            <!-- /navigation -->
 
 			<!-- page content -->
 			<div class="right_col" role="main">
@@ -63,19 +59,19 @@ else
 								<div class="x_content" id="content">
 									<div class="form-group pull-right">
 										<div class="col-md-12 col-sm-12 col-xs-12">
-											<a class="btn btn-primary" href="#" onclick="editContent()"><i class="fa fa-pencil-square-o"></i> Edit Content</a>
+											<a class="btn btn-primary" onclick="editContent()"><i class="fa fa-pencil-square-o"></i> Edit Content</a>
 										</div>
 									</div>
 									<div class="clearfix"></div>
 									<div class="clothes_content">
-										<!-- Clothes to match here -->
+										<!-- Clothes here -->
 									</div>
 								</div>
 								<div class="x_content" id="cancel" style="display:none">
 									<form class="form-horizontal form-label-left input_mask" action=<?php echo "api/edit-outfit.php?id=".$id; ?> method="post" enctype="multipart/form-data">
 										<div class="form-group pull-right">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<a class="btn btn-default" href="#" onclick="cancelEdit()"><i class="fa fa-remove"></i> Cancel</a>
+												<a class="btn btn-default" onclick="cancelEdit()"><i class="fa fa-remove"></i> Cancel</a>
 												<button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Save Changes</button>
 											</div>
 										</div>
