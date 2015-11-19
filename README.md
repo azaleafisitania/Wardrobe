@@ -22,7 +22,7 @@ On Working Features:
 
 	d. Delete: MySQL, Neo4j (done)
 
-2. Matching/Layer clothes
+2. Match clothes
 
 	a. View: MySQL (done), Neo4j (wip)
 
