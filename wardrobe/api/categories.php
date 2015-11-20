@@ -31,35 +31,35 @@ if($_SESSION['db_mode']=="MySQL") {
 			));
 		}
 	} else {
-		error_log('[Wardrobe][ERROR] MySQL query select ('.__FILE__.' line '.__LINE__.')');
+		error_log('Wardrobe: query select returns no result in '.__FILE__.' on line '.__LINE__);
 	}
 
 // Neo4j
 } else if($_SESSION['db_mode']=="Neo4j") {
 	// Check parameter
 	if(isset($_GET["category"])&&($_GET["category"]!="")) {
-		$CATEGORY = ":".$_GET["category"];	
+		$CATEGORY = "AND n.category = '".$_GET["category"]."'";
 	} else {
 		$CATEGORY = "";
 	}
-	// Cypher Query LABEL
-	$query = "MATCH (u:User)-[:OWN]->(n:Clothes".$CATEGORY.") WHERE u.username = '".$username."' RETURN DISTINCT LABELS(n)";
+	// Query LABEL
+	$query = "MATCH (u:User)-[:OWN]->(n:Clothes) WHERE u.username = '$username' $CATEGORY RETURN DISTINCT n.category ORDER BY n.category";
 	$response = $client->sendCypherQuery($query)->getRows();
-	$labels = $response['LABELS(n)'];
-	if($labels) {
-		for($i=0;$i<sizeof($labels);$i++) {
-			// Cypher Query COUNT
-			$query2 = "MATCH (n:Clothes:".$labels[$i][1].") RETURN COUNT(n)";
+	$categories = $response['n.category'];
+	if($categories) {
+		for($i=0;$i<sizeof($categories);$i++) {
+			// Query COUNT
+			$query2 = "MATCH (n:Clothes) WHERE n.category = '".$categories[$i]."' RETURN COUNT(n)";
 			$response2 = $client->sendCypherQuery($query2)->getRows();
 			$total = $response2['COUNT(n)'];
 			// Push data
 			array_push($data, array(
-				"name" => $labels[$i][1],
+				"name" => $categories[$i],
 				"total" => $total
 			));
 		}
 	} else {
-		error_log('[Wardrobe][ERROR] Cypher query select ('.__FILE__.' line '.__LINE__.')');
+		error_log('Wardrobe: query select categories returns no result in '.__FILE__.' on line '.__LINE__);
 	}
 }
 

@@ -3,9 +3,10 @@
 if(isset($_GET["id"])) {
 	$id = $_GET["id"];
 } else {
-	error_log('[Wardrobe Error] '.__FILE__.' line '.__LINE__.' : "clothes id is not set"');
+	error_log('Wardrobe: clothes id not set in '.__FILE__.' on line '.__LINE__);
 }
 session_start(); // Session
+$username = $_SESSION['username']; 
 include "../db-connect.php"; // Connect
 $data = array(); // Data
 
@@ -38,16 +39,30 @@ if($_SESSION['db_mode']=="MySQL") {
 				"id" => $row["id"],
 				"photo" => $row["photo"],
 				"category" => $row["category"],
-				"owner" => $row['owner']
+				"owner" => $username
 			));
 		}
 	} else {
-		error_log('[Wardrobe Eror] '.__FILE__.' line '.__LINE__.' : "query select matches error"');
+		error_log('Wardrobe: query select matches returns no result in '.__FILE__.' on line '.__LINE__);
 	}
 
 // Neo4j
 } else if($_SESSION['db_mode']=="Neo4j") {
-	// Query SELECT, get clothes
+	// Query SELECT get matches
+	$query = "MATCH (n:Clothes)-[:MATCH]->(m:Clothes) WHERE n.name = '$id' RETURN m";
+	$response = $client->sendCypherQuery($query)->getRows();
+	$clothes_all = $response['m'];
+	if($clothes_all) {
+		for($i=0;$i<sizeof($clothes_all);$i++) {
+			$clothes = $clothes_all[$i];
+			array_push($data, array(
+				"id" => $clothes["name"],
+				"photo" => $clothes["photo"],
+				"category" => $clothes["category"],
+				"owner" => $username
+			));
+		}
+	}
 }
 
 // Output dalam JSON

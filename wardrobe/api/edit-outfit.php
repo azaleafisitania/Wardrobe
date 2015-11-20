@@ -38,6 +38,13 @@ if($_SESSION['db_mode']=="MySQL") {
 		if(!$result) die('{"status":404},{"msg":"Error linking new clothes"}');
 	}
 } else if($_SESSION['db_mode']=="Neo4j") {
+	// Query DELETE "create" relationship
+	$query = "MATCH (n:Clothes)-[r:CREATE]->(o:Outfit) WHERE o.name = '$id_outfit' DELETE r";
+	$response = $client->sendCypherQuery($query)->getResult();
+	// Result
+	if(!empty($response)) {
+		
+	}
 
 }
 

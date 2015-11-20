@@ -1,10 +1,10 @@
 <?php
-// Prearations
+// Preparations
 if(isset($_GET["id1"])&&isset($_GET["id2"])) {
 	$id1 = $_GET["id1"];
 	$id2 = $_GET["id2"];
 } else {
-	error_log('[Wardrobe Error] '.__FILE__.' line '.__LINE__.' : clothes id not set');
+	error_log('Wardrobe: clothes id not set in '.__FILE__.' on line '.__LINE__);
 }
 session_start(); // Session
 include "../db-connect.php"; // Connect
@@ -21,7 +21,9 @@ if($_SESSION['db_mode']=="MySQL") {
 
 // Neo4j
 }else if($_SESSION['db_mode']=="Neo4j") {
-	// Query DELETE matches & relationship
+	// Query DELETE relationship match
+	$query = "MATCH (n:Clothes)-[r:MATCH]->(m:Clothes) WHERE (n.name = '$id1' AND m.name = '$id2') OR (n.name = '$id2' AND m.name = '$id1') DELETE r";
+	$response = $client->sendCypherQuery($query)->getResult();
 }
 
 // Back

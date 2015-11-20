@@ -95,5 +95,5 @@ if($_SESSION['db_mode']=="MySQL"){
 }
 
 // Back
-header('Location: ../clothes-detail.php?id=$id&success=1');
+header('Location: ../clothes-detail.php?id='.$id.'&success=1');
 ?>

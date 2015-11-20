@@ -56,9 +56,6 @@ else $category = $_GET['category'];
                             <div class="x_panel">
                                 <div class="x_title">
                                     <h2><i class="fa fa-photo"></i> Gallery</h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
-                                    </ul>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content clothes_gallery">
@@ -83,30 +80,11 @@ else $category = $_GET['category'];
 
     <?php include "script.php"; ?>
     <script>
-    // Load first batch of data
-    start = 0; 
-    limit = 20;
     $(document).ready(function () {
-    	// Ajax loading gif
-	    $(document).ajaxStart(function () {
-	        $("#ajax_load").show();
-	    }).ajaxStop(function () {
-	        $("#ajax_load").hide();
-	    });
-        $(".clothes_title").append('<h3><i class="fa fa-folder-open"></i> <a href="clothes.php">Clothes</a> <i class="fa fa-angle-right"></i> <?php echo ucfirst($category); ?></h3>');
+    	$(".clothes_title").append('<h3><i class="fa fa-folder-open"></i> <a href="clothes.php">Clothes</a> <i class="fa fa-angle-right"></i> <?php echo ucfirst($category); ?></h3>');
         getCategory("<?php echo $category; ?>");
-        //getClothes("<?php echo $category; ?>",start,limit);
         getClothes("<?php echo $category; ?>");
-
     });
-
-    // Load next batches when hit bottom, endless scroll
-    //$(window).scroll(function() {
-    //    if($(window).scrollTop() == $(document).height() - $(window).height()) {
-    //        start = start+limit;
-    //        getClothes("<?php echo $category; ?>",start,limit);
-    //    }
-    //});
     </script>
 </body>
 

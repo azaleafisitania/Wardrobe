@@ -1,6 +1,5 @@
 <?php
-// Session
-session_start();
+session_start(); // Session
 $username = $_SESSION['username'];
 
 // Check if id is set
@@ -40,7 +39,7 @@ if($_SESSION['db_mode']=="MySQL"){
 			else $pattern = "";
 			if($row['retailer']!=null) $retailer = $row['retailer']; 
 			else $retailer = "";
-			if($row['price']!=null) $price = "IDR ".number_format(($row['price'])); 
+			if($row['price']!=null) $price = $row['price']; 
 			else $price = "";
 			if($row['occasion']!=null) $occasion = $row['occasion']; 
 			else $occasion = "";
@@ -62,19 +61,18 @@ if($_SESSION['db_mode']=="MySQL"){
 		}
 	// Fail
 	} else {
-		error_log('[Wardrobe][ERROR] MySQL query SELECT ('.__FILE__.' line '.__LINE__.')');
+		error_log('Wardrobe: query select clothes returns no result in '.__FILE__.' on line '.__LINE__);
 	}
 
 // Neo4j
 }else if($_SESSION['db_mode']=="Neo4j"){
 	// Cyper query SELECT
-	$query = "MATCH (n:Clothes) WHERE n.name = '".$id."' RETURN n, LABELS(n)";
+	$query = "MATCH (n:Clothes) WHERE n.name = '".$id."' RETURN n";
 	$response = $client->sendCypherQuery($query)->getRows();
-	$clothes = $response['n'][0];
-	$category = $response['LABELS(n)'][0][1];
 	// Result
-	if($clothes) {
-		// Checks
+	if(!empty($response)) {
+		$clothes = $response['n'][0];
+		// Check Photo
 		if(($clothes['photo'])&&(file_exists("../images/".$username."/".$clothes['photo']))) {
 				$photo = "images/".$username."/".$clothes['photo'];
 			} else {
@@ -82,6 +80,8 @@ if($_SESSION['db_mode']=="MySQL"){
 			}
 			if($clothes['fav']!=null) $fav = $clothes['fav']; 
 			else $fav = "";
+			if($clothes['category']!=null) $category = $clothes['category']; 
+			else $category = "";
 			if($clothes['brand']!=null) $brand = $clothes['brand']; 
 			else $brand = "";
 			if($clothes['color']!=null) $color = $clothes['color']; 
@@ -110,7 +110,7 @@ if($_SESSION['db_mode']=="MySQL"){
 				"occasion" => $occasion
 			));
 	} else {
-		error_log('[Wardrobe][ERROR] Cypher query SELECT ('.__FILE__.' line '.__LINE__.')');
+		error_log('Wardrobe: query select clothes returns no response in '.__FILE__.' on line '.__LINE__);
 	}
 }
 

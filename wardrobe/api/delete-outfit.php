@@ -11,7 +11,9 @@ if($_SESSION['db_mode']=="MySQL") {
 
 // Neo4j
 } else if($_SESSION['db_mode']=="Neo4j") {
-
+	// Query DELETE outfit
+	$query = "MATCH ()-[r]->(o:Outfit) WHERE o.name = '".$id."' DELETE r,o";
+	$response = $client->sendCypherQuery($query)->getRows();
 }
 
 // Back

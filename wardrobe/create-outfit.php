@@ -106,14 +106,7 @@ if(!isset($_SESSION['username'])) {
             $("#ajax_load").hide();
         });
         getCategory();
-        getClothesForOutfit(start,limit);
-    });
-    // Load next batches when hit bottom, endless scroll
-    $(window).scroll(function() {
-        if($(window).scrollTop() == $(document).height() - $(window).height()) {
-            start = start+limit;
-            getClothesForOutfit(start,limit);
-        }
+        getClothesToCreateOutfit(start,limit);
     });
     </script>
 </body>

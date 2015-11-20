@@ -102,11 +102,11 @@ function getCategoryOption() {
 
 // CLOTHES
 // Get clothes for gallery
-function getClothes(category,start,limit) {
+function getClothes(category) {
 	$.ajax({
 		url: "api/clothes.php",
 		type: "GET",
-		data: { category: category, start: start, limit: limit },
+		data: { category: category },
 		beforeSend: function() {
 		},
 		success: function(data,status) {
@@ -119,8 +119,6 @@ function getClothes(category,start,limit) {
 						document.getElementById(clothes[i]['category']).style="display:block";
 						$("."+clothes[i]['category']+"").append('<a href="clothes-detail.php?id='+clothes[i]['id']+'"><img width=200 style="padding: .1em;" src="'+clothes[i]['photo']+'" /></a>');
 					}	
-				} else {
-					$("#ajax_load").hide();
 				}
 			}
 		}
@@ -215,34 +213,6 @@ function getMatches(id) {
 		}
 	})
 }
-// Get layers
-function getLayers(id) {
-	$.ajax({
-		url: "api/layers.php",
-		type: "GET",
-		data: { id: id },
-		beforeSend: function() {
-		},
-		success: function(data,status) {
-			if(status=="success") {
-				clothes = JSON.parse(data);
-				var recent_category = toTitleCase(clothes[0]['category']);
-				var elem = '';
-				elem += '<h2 class="page-header">'+recent_category+'</h2>';
-				// Elements to append
-				for(var i=0;i<clothes.length;i++){
-					if(toTitleCase(clothes[i]['category'])!=recent_category){
-						recent_category = toTitleCase(clothes[i]['category']);
-						elem += '<h2 class="page-header">'+recent_category+'</h2>';
-					}
-					elem += '<a href="clothes-detail.php?id='+clothes[i]['id']+'"><img width=150 style="padding: .1em;" src="images/'+clothes[i]['owner']+'/'+clothes[i]['photo']+'" alt="image" /></a>';
-				}
-				// Append
-				$(".clothes_layers").append(elem);
-			}
-		}
-	})
-}
 // Get clothes to match
 function getClothesToMatch(id) {
 	$.ajax({
@@ -277,46 +247,19 @@ function getClothesToMatch(id) {
 		}
 	})
 }
-// Get clothes to layer
-function getClothesToLayer(id) {
-	$.ajax({
-		url: "api/clothes-to-layer.php",
-		type: "GET",
-		data: { id: id },
-		beforeSend: function(){
-		},
-		success: function(data,status){
-			if(status=="success"){
-				clothes = JSON.parse(data);
-				var recent_category = toTitleCase(clothes[0]['category']);
-				var elem = '';
-				elem += '<h2 class="page-header">'+recent_category+'</h2>';
-				for(var i=0;i<clothes.length;i++){
-					if(toTitleCase(clothes[i]['category'])!=recent_category){
-						recent_category = toTitleCase(clothes[i]['category']);
-						elem += '<h2 class="page-header">'+recent_category+'</h2>';
-					}
-					if(clothes[i]['match']) {
-						elem += '<a href="api/remove-layer.php?id1='+id+'&id2='+clothes[i]['id']+'">';
-						elem += '<img width=150 style="padding: .1em;" src="images/'+clothes[i]['owner']+'/'+clothes[i]['photo']+'" alt="image" />';
-						elem += '</a>';
-					} else {
-						elem += '<a href="api/add-layer.php?id1='+id+'&id2='+clothes[i]['id']+'">';
-						elem += '<img width=150 style="opacity: 0.2; padding: .1em;" src="images/'+clothes[i]['owner']+'/'+clothes[i]['photo']+'" alt="image" />';
-						elem += '</a>';
-					}
-				}
-				$(".clothes_to_layer").append(elem);
-			}
-		}
-	})
+// Add match
+function addMatch(id,id) {
+
 }
-// Get clothes for outfit
-function getClothesForOutfit() {
+// Remove match
+function removeMatch(id,id) {
+
+}
+// Get clothes to create outfit
+function getClothesToCreateOutfit() {
 	$.ajax({
 		url: "api/clothes.php",
-		type: "GET",
-		data: { start: start, limit: limit },
+		type: "POST",
 		beforeSend: function() {
 		},
 		success: function(data,status) {

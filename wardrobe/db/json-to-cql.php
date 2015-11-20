@@ -14,8 +14,6 @@ for($i=0;$i<sizeof($user);$i++) {
 	$string = "CREATE ($username:User {username: '$username', password: '$password', name: '$name', profpic: '$profpic'})\n";
 	fwrite($file, $string); // Write
 }
-fwrite($file, "\n"); // Write
-
 // Clothes
 // User-[Own]->Clothes
 $data = file_get_contents("neo4j_clothes.json");
@@ -25,8 +23,8 @@ for($i=0;$i<sizeof($clothes);$i++) {
 	$owner = $clothes[$i]['owner'];
 	$category = $clothes[$i]['category'];
 	$photo = $clothes[$i]['photo'];
-	//$blob_image = "-";
-	$blob_image = base64_encode(file_get_contents("../images/".$owner."/".$clothes[$i]['photo']));
+	$blob_image = "-";
+	//$blob_image = base64_encode(file_get_contents("../images/".$owner."/".$clothes[$i]['photo']));
 	$brand = $clothes[$i]['brand'];
 	$fav = $clothes[$i]['fav'];
 	$color = $clothes[$i]['color'];
@@ -39,8 +37,6 @@ for($i=0;$i<sizeof($clothes);$i++) {
 	$string = "CREATE ($owner)-[:OWN]->($node:Clothes {name: '$id', category: '$category', photo: '$photo', blob_image: '$blob_image', brand: '$brand', fav: '$fav', color: '$color', pattern: '$pattern', retailer: '$retailer', occasion: '$occasion', price: '$price' })\n";
 	fwrite($file, $string); // Write
 }
-fwrite($file, "\n"); // Write
-
 // Clothes<-[Match]->Clothes
 $data = file_get_contents("neo4j_matches.json");
 $matches = json_decode($data, true);
@@ -55,21 +51,6 @@ for($i=0;$i<sizeof($matches);$i++) {
 	$string .= "CREATE ($node2)-[:MATCH {score:'$score'}]->($node1)\n";
 	fwrite($file, $string); // Write
 }
-// Clothes<-[Layer]->Clothes
-$data = file_get_contents("neo4j_layers.json");
-$layers = json_decode($data, true);
-for($i=0;$i<sizeof($layers);$i++) {
-	$id_clothes1 = $layers[$i]['id_clothes1'];
-	$id_clothes2 = $layers[$i]['id_clothes2'];
-	$score = $layers[$i]['score'];
-
-	$node1 = "C".$id_clothes1;
-	$node2 = "C".$id_clothes2;
-	$string = "CREATE ($node1)-[:LAYER {score:'$score'}]->($node2)\n";
-	$string .= "CREATE ($node2)-[:LAYER {score:'$score'}]->($node1)\n";
-	fwrite($file, $string); // Write
-}
-fwrite($file, "\n"); // Write
 
 // Outfits
 $data = file_get_contents("neo4j_outfits.json");
@@ -83,8 +64,6 @@ for($i=0;$i<sizeof($outfits);$i++) {
 	$string = "CREATE ($node:Outfit {name:'$id',total_score:'$total_score',user_rating:'$user_rating'})\n";
 	fwrite($file, $string); // Write
 }
-fwrite($file, "\n"); // Write
-
 // Clothes-[Create]->Outfit
 $data = file_get_contents("neo4j_creates.json");
 $creates = json_decode($data, true);
@@ -97,6 +76,5 @@ for($i=0;$i<sizeof($creates);$i++) {
 	$string = "CREATE ($nodeC)-[:CREATE]->($nodeO)\n";
 	fwrite($file, $string); // Write
 }
-
 fclose($file); // Close
 ?>

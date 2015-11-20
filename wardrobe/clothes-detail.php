@@ -1,12 +1,8 @@
 <?php
-session_start();
-
-// Check session user
+session_start(); // Session
 if(!isset($_SESSION['username'])) {
     header("Location: login.php");
 }
-
-// Validate if parameters is set
 if(isset($_GET['id'])) {
 	$id = $_GET['id'];
 } else {
@@ -167,33 +163,6 @@ else $success = 0;
 									</div>
 									<div class="clothes_to_match">
 										<!-- Clothes to match here -->
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-8 col-sm-8 col-xs-12">
-							<div class="x_panel">
-								<div class="x_title">
-									<h2><i class="fa fa-bars"></i> Layers</h2>
-									<div class="clearfix"></div>
-								</div>
-								<div class="x_content clothes_layers" id="layers">
-									<div class="form-group pull-right">
-										<div class="col-md-12 col-sm-12 col-xs-12">
-											<a class="btn btn-primary" onclick="editLayers()"><i class="fa fa-pencil-square-o"></i> Edit Layers</a>
-										</div>
-									</div>
-									<!-- Clothes layers here -->
-								</div>
-								<div class="x_content" id="cancel_layer" style="display:none">
-									<div class="form-group pull-right">
-										<div class="col-md-12 col-sm-12 col-xs-12">
-											<a class="btn btn-default" onclick="cancelLayers()"><i class="fa fa-remove"></i> Cancel</a>
-										</div>
-									</div>
-									<div class="clothes_to_layer">
-										<!-- Clothes to layer here -->
 									</div>
 								</div>
 							</div>

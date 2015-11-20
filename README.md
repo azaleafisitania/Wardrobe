@@ -32,18 +32,19 @@ On Working Features:
 
 3. Outfit
 
-	a. View: MySQL (done), Neo4j (wip)
+	a. View: MySQL, Neo4j (done)
 
-	b. Create: MySQL (done), Neo4j (wip)
+	b. Create: MySQL, Neo4j (done)
 
 	c. Edit: MySQL (done), Neo4j (wip)
 
-	d. Delete: MySQL (done), Neo4j (wip)
+	d. Delete: MySQL, Neo4j (done)
+
 4. Auto-generate outfit (wip)
 
 5. User (try username "sista" password "sista")
 
-	a. Login/Logout with session: MySQL (done)
+	a. Login/Logout with session: MySQL, Neo4j (done)
 
 	b. View (wip)
 
@@ -53,13 +54,15 @@ On Working Features:
 
 	e. Delete (wip)
 
-6. Image in BLOB (thesis matter)
+6. Image in BLOB
 
-	a. Insert: MySQL (done), Neo4j (wip)
+	a. View: (wip)
 
-	b. Update: MySQL (done), Neo4j (wip)
+	b. Insert: MySQL (done), Neo4j (wip)
 
-	c. Delete: MySQL (done), Neo4j (wip)
+	c. Update: MySQL (done), Neo4j (wip)
+
+	d. Delete: MySQL (done), Neo4j (wip)
 
 Additional Features:
 

@@ -9,7 +9,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 if(!isset($_SESSION['db_mode'])) {
 	$_SESSION['db_mode'] = "MySQL";
-	error_log('[Wardrobe] '.__FILE__.' line '.__LINE__.' : "database mode not defined. MySQL by default"');
+	error_log('Wardrobe: database mode not defined, switch to default, MySQL in '.__FILE__.' line '.__LINE__);
 }
 
 // Connect MySQL
@@ -32,11 +32,6 @@ if($_SESSION['db_mode']=="MySQL") {
 	->addConnection('default', 'http', $host, $port, true, $user, $password)
 	->setAutoFormatResponse(true)
 	->build();
-	//$query = "MATCH (n:Clothes) RETURN n.name, n.brand";
-	//$response = $client->sendCypherQuery($query)->getRows();
-	//$clothes = $response['n'];
-	//echo $clothes[0]['name'];
-	//echo json_encode($response);
 }
 ?>
 

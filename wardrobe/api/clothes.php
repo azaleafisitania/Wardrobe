@@ -1,14 +1,8 @@
 <?php
-// Session
-session_start();
+session_start(); // Session
 $username = $_SESSION['username'];
-
-// Check parameter
-if(isset($_GET["limit"])) $LIMIT = "LIMIT ".$_GET["start"].",".$_GET["limit"];
-else $LIMIT = "";
-
 include "../db-connect.php"; // Connect
-$data = array();
+$data = array(); // Data
 
 // Mode MySQL
 if($_SESSION['db_mode']=="MySQL") {
@@ -19,7 +13,7 @@ if($_SESSION['db_mode']=="MySQL") {
 		$CATEGORY = "";
 	}
 	// MySQL query SELECT
-	$query = "SELECT id, photo, fav, category, owner FROM clothes WHERE owner = '".$username."' $CATEGORY ORDER BY category $LIMIT";
+	$query = "SELECT id, photo, fav, category, owner FROM clothes WHERE owner = '".$username."' $CATEGORY ORDER BY category";
 	$result = mysql_query($query,$db);
 	// Result
 	if($result) {
@@ -41,27 +35,25 @@ if($_SESSION['db_mode']=="MySQL") {
 		}
 	// Fail
 	} else {
-		error_log('[Wardrobe][ERROR] MySQL query SELECT ('.__FILE__.' line '.__LINE__.')');
+		error_log('Wardrobe: query select clothes returns no result in '.__FILE__.' on line '.__LINE__);
 	}
 
 // Neo4j
 } else if($_SESSION['db_mode']=="Neo4j") {
 	// Check parameter
 	if(isset($_GET["category"])&&($_GET["category"]!="")) {
-		$CATEGORY = "AND n.category = ".$_GET["category"];	
+		$CATEGORY = "AND n.category = '".$_GET["category"]."'";	
 	} else {
 		$CATEGORY = "";
 	}
-	// Cypher query MATCH
-	$query = "MATCH (u:User)-[:OWN]->(n:Clothes) WHERE u.username = '".$username."' $CATEGORY RETURN n, LABELS(n)";
+	// Query SELECT clothes
+	$query = "MATCH (u:User)-[:OWN]->(n:Clothes) WHERE u.username = '".$username."' $CATEGORY RETURN n";
 	$response = $client->sendCypherQuery($query)->getRows();
 	$clothes_all = $response['n'];
-	$categories_all = $response['LABELS(n)'];
 	// Result
 	if($clothes_all) {
 		for($i=0;$i<sizeof($clothes_all);$i++) {
 			$clothes = $clothes_all[$i];
-			$category = $categories_all[$i][1]; 
 			if(($clothes['photo'])&&(file_exists("../images/".$username."/".$clothes['photo']))) {
 				$photo = "images/".$username."/".$clothes['photo'];
 			} else {
@@ -72,12 +64,11 @@ if($_SESSION['db_mode']=="MySQL") {
 				"id" => $clothes["name"],
 				"photo" => $photo,
 				"fav" => $clothes["fav"],
-				"category" => $category
+				"category" => $clothes['category']
 			));
 		}
-	// Fail
 	} else {
-		error_log('[Wardrobe][ERROR] Cypher query SELECT ('.__FILE__.' line '.__LINE__.')');
+		error_log('Wardrobe: query select clothes returns no result in '.__FILE__.' on line '.__LINE__);
 	}
 }
 

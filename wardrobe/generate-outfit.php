@@ -1,9 +1,9 @@
 <?php
-session_start();
-
-// Check session user
-if(!isset($_SESSION['user'])) {
+session_start(); // Session
+if(!isset($_SESSION['username'])) {
     header("Location: login.php");
+} else {
+    $username = $_SESSION['username'];  
 }
 ?>
 
@@ -52,9 +52,6 @@ if(!isset($_SESSION['user'])) {
                             <div class="x_panel">
                                 <div class="x_title">
                                     <h2><i class="fa fa-wrench"></i> Options</h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
-                                    </ul>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
