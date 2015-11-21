@@ -37,4 +37,4 @@
 <![endif]-->
 
 <!-- Web icon -->
-<link rel="shortcut icon" href="images/clothes-icons/1442383027_clothing_accesories_clothes_fabric-11.png">
+<link rel="shortcut icon" href="images/favicon.png">

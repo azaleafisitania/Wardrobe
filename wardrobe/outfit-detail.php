@@ -64,12 +64,11 @@ else $id = $_GET['id'];
 										<!-- Clothes here -->
 									</div>
 								</div>
-								<div class="x_content" id="cancel" style="display:none">
+								<div class="x_content" id="done" style="display:none">
 									<form class="form-horizontal form-label-left input_mask" action=<?php echo "api/edit-outfit.php?id=".$id; ?> method="post" enctype="multipart/form-data">
 										<div class="form-group pull-right">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<a class="btn btn-default" onclick="cancelEdit()"><i class="fa fa-remove"></i> Cancel</a>
-												<button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Save Changes</button>
+												<a class="btn btn-success" onclick="doneEdit()"><i class="fa fa-check"></i> Done</a>
 											</div>
 										</div>
 										<div class="clearfix"></div>
@@ -105,17 +104,18 @@ else $id = $_GET['id'];
 	});
 
 		// Show-hide button cancel
-	function cancelEdit(){
+	function doneEdit(){
 		document.getElementById("content").style="display:block";
-		document.getElementById("cancel").style="display:none";
+		document.getElementById("done").style="display:none";
+		location.reload();
 	}
 
 	// Show-hide button edit matches
 	function editContent(){
 		document.getElementById("content").style="display:none";
-		document.getElementById("cancel").style="display:block";
+		document.getElementById("done").style="display:block";
 		getCategory();
-		getClothesForEditOutfit(<?php echo $id; ?>,start,limit);	
+		getClothesToEditOutfit(<?php echo $id; ?>,start,limit);	
 	}
 
 	// Load next batches when hit bottom, endless scroll
@@ -124,7 +124,7 @@ else $id = $_GET['id'];
 			document.getElementById("ajax_load").style="display:block";
 			setTimeout(function(){
 				start = start+limit;
-				getClothesForEditOutfit(<?php echo $id; ?>,start,limit);
+				getClothesToEditOutfit(<?php echo $id; ?>,start,limit);
 				document.getElementById("ajax_load").style="display:none";
 			},100);
 		}

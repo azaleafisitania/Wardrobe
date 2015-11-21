@@ -36,7 +36,7 @@ On Working Features:
 
 	b. Create: MySQL, Neo4j (done)
 
-	c. Edit: MySQL (done), Neo4j (wip)
+	c. Edit: MySQL, Neo4j (done)
 
 	d. Delete: MySQL, Neo4j (done)
 
@@ -54,7 +54,7 @@ On Working Features:
 
 	e. Delete (wip)
 
-6. Image in BLOB
+6. Image in BLOB 
 
 	a. View: (wip)
 

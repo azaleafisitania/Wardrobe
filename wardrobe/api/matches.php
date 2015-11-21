@@ -35,15 +35,22 @@ if($_SESSION['db_mode']=="MySQL") {
 	// Push data
 	if($result) {
 		while($row = mysql_fetch_array($result)) {
+			// Photo
+			if(($row['photo'])&&(file_exists("../images/".$username."/".$row['photo']))) {
+				$photo = "images/".$username."/".$row['photo'];
+			} else {
+				$photo = "images/Photo Here.jpg";
+			}
+			// Push data
 			array_push($data, array(
 				"id" => $row["id"],
-				"photo" => $row["photo"],
+				"photo" => $photo,
 				"category" => $row["category"],
 				"owner" => $username
 			));
 		}
 	} else {
-		error_log('Wardrobe: query select matches returns no result in '.__FILE__.' on line '.__LINE__);
+		error_log('Wardrobe: query select matches returns no result in '.__FILE__);
 	}
 
 // Neo4j
@@ -51,17 +58,26 @@ if($_SESSION['db_mode']=="MySQL") {
 	// Query SELECT get matches
 	$query = "MATCH (n:Clothes)-[:MATCH]->(m:Clothes) WHERE n.name = '$id' RETURN m";
 	$response = $client->sendCypherQuery($query)->getRows();
-	$clothes_all = $response['m'];
-	if($clothes_all) {
+	if(!empty($response)) {
+		$clothes_all = $response['m'];
 		for($i=0;$i<sizeof($clothes_all);$i++) {
 			$clothes = $clothes_all[$i];
+			// Photo
+			if(($clothes['photo'])&&(file_exists("../images/".$username."/".$clothes['photo']))) {
+				$photo = "images/".$username."/".$clothes['photo'];
+			} else {
+				$photo = "images/Photo Here.jpg";
+			}
+			// Push data
 			array_push($data, array(
 				"id" => $clothes["name"],
-				"photo" => $clothes["photo"],
+				"photo" => $photo,
 				"category" => $clothes["category"],
 				"owner" => $username
 			));
 		}
+	} else {
+		error_log('Wardrobe: query select matches returns no result in '.__FILE__);
 	}
 }
 

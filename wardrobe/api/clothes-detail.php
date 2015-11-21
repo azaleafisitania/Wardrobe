@@ -61,7 +61,7 @@ if($_SESSION['db_mode']=="MySQL"){
 		}
 	// Fail
 	} else {
-		error_log('Wardrobe: query select clothes returns no result in '.__FILE__.' on line '.__LINE__);
+		error_log('Wardrobe: query select clothes returns no result in '.__FILE__);
 	}
 
 // Neo4j
@@ -110,7 +110,7 @@ if($_SESSION['db_mode']=="MySQL"){
 				"occasion" => $occasion
 			));
 	} else {
-		error_log('Wardrobe: query select clothes returns no response in '.__FILE__.' on line '.__LINE__);
+		error_log('Wardrobe: query select clothes returns no result in '.__FILE__);
 	}
 }
 

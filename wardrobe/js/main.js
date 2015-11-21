@@ -70,10 +70,6 @@ function getCategory(category) {
 				}
 				// Append
 				$(".clothes_gallery").append(elem);
-				// Append element new clothes
-				for(i=0;i<categories.length;i++) {
-					$("."+categories[i]['name']+"").append('<a href="add-clothes.php?category='+categories[i]['name']+'"><img width=200 style="padding: .1em;" src="images/New Clothes.jpg" /></a>');
-				}
 			}
 		}
 	})
@@ -108,17 +104,29 @@ function getClothes(category) {
 		type: "GET",
 		data: { category: category },
 		beforeSend: function() {
+
 		},
 		success: function(data,status) {
 			if(status=="success") {
 				var clothes = JSON.parse(data);
 				var elem = "";
-				// Append element clothes
+				var categories = [];
 				if(clothes.length!=0) {
 					for(var i=0;i<clothes.length;i++) {
+						// Append new clothes
+						if(categories.indexOf(clothes[i]['category'])==-1) {
+							$("."+clothes[i]['category']+"").append('<a href="add-clothes.php?category='+clothes[i]['category']+'"><img width=200 style="padding: .1em;" src="images/New Clothes.jpg" /></a>');
+							categories.push(clothes[i]['category']);
+						}
+						// Append clothes
 						document.getElementById(clothes[i]['category']).style="display:block";
 						$("."+clothes[i]['category']+"").append('<a href="clothes-detail.php?id='+clothes[i]['id']+'"><img width=200 style="padding: .1em;" src="'+clothes[i]['photo']+'" /></a>');
 					}	
+				}
+				if(category=="") {
+					$(".clothes_title").append('<h3><i class="fa fa-folder-open"></i> <a href="clothes.php">All Clothes</a></h3>');
+				} else {
+					$(".clothes_title").append('<h3><i class="fa fa-folder-open"></i> <a href="clothes.php">All Clothes</a> <i class="fa fa-angle-right"></i> <a href="clothes.php?category='+category+'">'+toTitleCase(category)+'</a></h3>');
 				}
 			}
 		}
@@ -184,6 +192,8 @@ function getClothesDetail(id) {
 		}
 	})
 }
+
+// MATCHES
 // Get matches
 function getMatches(id) {
 	$.ajax({
@@ -195,20 +205,13 @@ function getMatches(id) {
 		success: function(data,status) {
 			if(status=="success") {
 				clothes = JSON.parse(data);
-				var recent_category = toTitleCase(clothes[0]['category']);
 				var elem = '';
-				elem += '<h2 class="page-header">'+recent_category+'</h2>';
 				// Elements to append
 				for(var i=0;i<clothes.length;i++) {
-					if(toTitleCase(clothes[i]['category'])!=recent_category) {
-						recent_category = toTitleCase(clothes[i]['category']);
-						elem += '<h2 class="page-header">'+recent_category+'</h2>';
-					}
-					elem += '<a href="clothes-detail.php?id='+clothes[i]['id']+'"><img width=150 style="padding: .1em;" src="images/'+clothes[i]['owner']+'/'+clothes[i]['photo']+'" alt="image" /></a>';
+					elem = '<a href="clothes-detail.php?id='+clothes[i]['id']+'"><img width=150 style="padding: .1em;" src="'+clothes[i]['photo']+'" alt="image" /></a>';
+					$("#matches > .clothes_gallery > ."+clothes[i]['category']+"").append(elem);
+					$("#matches > .clothes_gallery > ."+clothes[i]['category']+"").css('display', 'block');
 				}
-
-				// Append
-				$(".clothes_matches").append(elem);
 			}
 		}
 	})
@@ -222,39 +225,89 @@ function getClothesToMatch(id) {
 		beforeSend: function(){
 		},
 		success: function(data,status){
-			if(status=="success"){
+			if(status=="success") {
 				clothes = JSON.parse(data);
-				var recent_category = toTitleCase(clothes[0]['category']);
-				var elem = '';
-				elem += '<h2 class="page-header">'+recent_category+'</h2>';
-				for(var i=0;i<clothes.length;i++){
-					if(toTitleCase(clothes[i]['category'])!=recent_category){
-						recent_category = toTitleCase(clothes[i]['category']);
-						elem += '<h2 class="page-header">'+recent_category+'</h2>';
-					}
-					if(clothes[i]['match']) {
-						elem += '<a href="api/remove-match.php?id1='+id+'&id2='+clothes[i]['id']+'">';
-						elem += '<img width=150 style="padding: .1em;" src="images/'+clothes[i]['owner']+'/'+clothes[i]['photo']+'" alt="image" />';
-						elem += '</a>';
+				var categories = [];
+				for(var i=0;i<clothes.length;i++) {
+					var elem = '';
+					var id2 = clothes[i]['id'];
+					var category = clothes[i]['category'];
+					var checked = clothes[i]['checked'];
+					var photo = clothes[i]['photo'];
+					createCheckbox("clothes_"+id2,"clothes[]",id2,category,checked,"display:none");
+					if(checked=="checked") {
+						elem += '&nbsp;<label for="clothes_'+id2+'" id="fade_'+id2+'" style="opacity:1" onclick="editMatch(this.id,'+id+','+id2+')">';
 					} else {
-						elem += '<a href="api/add-match.php?id1='+id+'&id2='+clothes[i]['id']+'">';
-						elem += '<img width=150 style="opacity: 0.2; padding: .1em;" src="images/'+clothes[i]['owner']+'/'+clothes[i]['photo']+'" alt="image" />';
-						elem += '</a>';
+						elem += '&nbsp;<label for="clothes_'+id2+'" id="fade_'+id2+'" style="opacity:0.2" onclick="editMatch(this.id,'+id+','+id2+')">';
 					}
+					elem += '<img width=150 style="padding: .1em;" src="'+photo+'" />';
+					elem += '</label>';
+					// Append new clothes
+					if(categories.indexOf(category)==-1) {
+						$("#done > .clothes_gallery > ."+category+"").append('<a href="add-clothes.php?category='+category+'"><img width=150 style="padding: .1em;" src="images/New Clothes.jpg" /></a>');
+						categories.push(category);
+					}
+					// Append clothes matches
+					$("#done > .clothes_gallery > ."+category+"").append(elem);
+					$("#done > .clothes_gallery > ."+category+"").css('display', 'block');
 				}
-				$(".clothes_to_match").append(elem);
 			}
 		}
 	})
 }
+// Edit match
+function editMatch(id,id1,id2) {
+	if(document.getElementById(id).style.opacity=="1") {
+		removeMatch(id1,id2);
+	} else if(document.getElementById(id).style.opacity=="0.2") {
+		addMatch(id1,id2);
+	}
+	fade(id);
+}
 // Add match
-function addMatch(id,id) {
-
+function addMatch(id1,id2) {
+	$.ajax({
+		url: "api/add-match.php",
+		type: "GET",
+		data: { id1: id1, id2: id2 },
+		beforeSend: function() {
+		},
+		success: function() {
+			new PNotify({
+				title: 'Successfully Added!',
+				text: 'You just added a matching clothes',
+				type: 'dark',
+				nonblock: {
+					nonblock: true,
+					nonblock_opacity: .2
+				}
+			});
+		}
+	})	
 }
 // Remove match
-function removeMatch(id,id) {
-
+function removeMatch(id1,id2) {
+	$.ajax({
+		url: "api/remove-match.php",
+		type: "GET",
+		data: { id1: id1, id2: id2 },
+		beforeSend: function() {
+		},
+		success: function() {
+			new PNotify({
+				title: 'Successfully Removed!',
+				text: 'You just removed a matching clothes',
+				type: 'dark',
+				nonblock: {
+					nonblock: true,
+					nonblock_opacity: .2
+				}
+			});
+		}
+	})
 }
+
+// OUTFIT
 // Get clothes to create outfit
 function getClothesToCreateOutfit() {
 	$.ajax({
@@ -265,6 +318,7 @@ function getClothesToCreateOutfit() {
 		success: function(data,status) {
 			if(status=="success") {
 				clothes = JSON.parse(data);
+				var categories = [];
 				for(var i=0;i<clothes.length;i++) {
 					var elem = '';
 					id = clothes[i]['id'];
@@ -272,17 +326,23 @@ function getClothesToCreateOutfit() {
 					elem += '&nbsp;<label for="clothes_'+id+'" id="fade_'+id+'" style="opacity:0.2" onclick="fade(this.id)">';
 					elem += '<img width=200 style="padding: .1em;" src="'+clothes[i]['photo']+'" />';
 					elem += '</label>';
+					// Append new clothes
+					if(categories.indexOf(clothes[i]['category'])==-1) {
+						$("."+clothes[i]['category']+"").append('<a href="add-clothes.php?category='+clothes[i]['category']+'"><img width=200 style="padding: .1em;" src="images/New Clothes.jpg" /></a>');
+						categories.push(clothes[i]['category']);
+					}
+					// Append clothes
 					$("."+clothes[i]['category']+"").append(elem);
-					document.getElementById(clothes[i]['category']).style="display:block";
+					$("."+clothes[i]['category']+"").css('display', 'block');
 				}
 			}
 		}
 	})
 }
 // Get clothes for edit outfit
-function getClothesForEditOutfit(id,start,limit) {
+function getClothesToEditOutfit(id,start,limit) {
 	$.ajax({
-		url: "api/clothes-checked.php",
+		url: "api/clothes-to-outfit.php",
 		type: "GET",
 		data: { id: id, start: start, limit: limit },
 		beforeSend: function() {
@@ -292,24 +352,77 @@ function getClothesForEditOutfit(id,start,limit) {
 				clothes = JSON.parse(data);
 				for(var i=0;i<clothes.length;i++) {
 					var elem = '';
-					id = clothes[i]['id'];
-					createCheckbox("clothes_"+id,"clothes[]",id,clothes[i]['category'],clothes[i]['checked'],"display:none");
-					if(clothes[i]['checked']=="checked") {
-						elem += '&nbsp;<label for="clothes_'+id+'" id="fade_'+id+'" style="opacity:1" onclick="fade(this.id)">';
+					var id2 = clothes[i]['id'];
+					var category = clothes[i]['category'];
+					var checked = clothes[i]['checked'];
+					var photo = clothes[i]['photo'];
+					createCheckbox("clothes_"+id2,"clothes[]",id2,category,checked,"display:none");
+					if(checked=="checked") {
+						elem += '&nbsp;<label for="clothes_'+id2+'" id="fade_'+id2+'" style="opacity:1" onclick="editOutfit(this.id,'+id+','+id2+')">';
 					} else {
-						elem += '&nbsp;<label for="clothes_'+id+'" id="fade_'+id+'" style="opacity:0.2" onclick="fade(this.id)">';
+						elem += '&nbsp;<label for="clothes_'+id2+'" id="fade_'+id2+'" style="opacity:0.2" onclick="editOutfit(this.id,'+id+','+id2+')">';
 					}
-					elem += '<img width=200 style="padding: .1em;" src="'+clothes[i]['photo']+'" />';
+					elem += '<img width=200 style="padding: .1em;" src="'+photo+'" />';
 					elem += '</label>';
-					$("."+clothes[i]['category']+"").append(elem);
-					document.getElementById(clothes[i]['category']).style="display:block";
+					$("."+category+"").append(elem);
+					document.getElementById(category).style="display:block";
 				}
 			}
+
 		}
 	})
 }
-
-// OUTFIT
+// Edit outfit
+function editOutfit(id,id1,id2) {
+	if(document.getElementById(id).style.opacity=="1") {
+		removeFromOutfit(id1,id2);
+	} else if(document.getElementById(id).style.opacity=="0.2") {
+		addToOutfit(id1,id2);
+	}
+	fade(id);
+}
+// Add to outfit
+function addToOutfit(id1,id2) {
+	$.ajax({
+		url: "api/add-to-outfit.php",
+		type: "GET",
+		data: { id1: id1, id2: id2 },
+		beforeSend: function() {
+		},
+		success: function() {
+			new PNotify({
+				title: 'Successfully Added!',
+				text: 'You just added a clothes to this outfit',
+				type: 'dark',
+				nonblock: {
+					nonblock: true,
+					nonblock_opacity: .2
+				}
+			});
+		}
+	})	
+}
+// Remove from outfit
+function removeFromOutfit(id1,id2) {
+	$.ajax({
+		url: "api/remove-from-outfit.php",
+		type: "GET",
+		data: { id1: id1, id2: id2 },
+		beforeSend: function() {
+		},
+		success: function() {
+			new PNotify({
+				title: 'Successfully Removed!',
+				text: 'You just removed a clothes from this outfit',
+				type: 'dark',
+				nonblock: {
+					nonblock: true,
+					nonblock_opacity: .2
+				}
+			});
+		}
+	})
+}
 // Get outfits
 function getOutfits(start,limit) {
 	$.ajax({
@@ -326,8 +439,7 @@ function getOutfits(start,limit) {
 				for(var i=0;i<outfits.length;i++) {
 					elem += '<div class="col-md-12 col-sm-12 col-xs-12">';
 					elem += '<h2 class="page-header"><a href="outfit-detail.php?id='+outfits[i]['id']+'">Outfit '+outfits[i]["id"]+'</a></h2>';
-					clothes = (outfits[i]["clothes"]);
-					var photo = "";
+					clothes = outfits[i]["clothes"];
 					for(var j=0;j<clothes.length;j++) {
 						elem += '<a href="clothes-detail.php?id='+clothes[j]['id']+'">';
 						elem += '<img width=200 style="padding: .1em;" src="'+clothes[j]['photo']+'" alt="image" />';
@@ -361,11 +473,12 @@ function getOutfitDetail(id) {
 					elem += '</a>';	
 				}
 				elem += '</div>';
-				$(".clothes_content").append(elem);				
+				$(".clothes_content").append(elem);		
 			}
 		}
 	})
 }
+// Generate outfit
 function generateOutfit() {
 	$.ajax({
 		url: "api/generate-outfit.php",
@@ -425,7 +538,7 @@ function createCheckbox(id,name,value,IDParent,checked,style) {
 	input.style = style;
 	document.getElementById(IDParent).appendChild(input);
 	//$("input[type='checkbox']").iCheck({checkboxClass: 'icheckbox_flat-green'}); //wrap with iCheck
-	//$(".icheckbox_flat-green").attr({"style": style}); //hide the checkbox
+	//$(".icheckbox_flat-green").attr({"style": style});
 }
 // Title Case
 function toTitleCase(str) {
@@ -433,4 +546,3 @@ function toTitleCase(str) {
     	return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
 }
-

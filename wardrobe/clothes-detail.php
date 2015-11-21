@@ -131,7 +131,7 @@ else $success = 0;
 										<div class="ln_solid"></div>
 										<div class="form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<a class="btn btn-default" href=<?php echo "clothes-detail.php?id=".$id; ?>><i class="fa fa-remove"></i> Cancel</a>
+												<a class="btn btn-default" href=<?php echo "clothes-detail.php?id=".$id; ?>><i class="fa fa-remove"></i> Reset</a>
 												<button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Save Changes</button>
 											</div>
 										</div>
@@ -147,21 +147,23 @@ else $success = 0;
 									<div class="clearfix"></div>
 								</div>
 
-								<div class="x_content clothes_matches" id="matches">
+								<div class="x_content" id="matches">
 									<div class="form-group pull-right">
 										<div class="col-md-12 col-sm-12 col-xs-12">
 											<a class="btn btn-primary" onclick="editMatches()"><i class="fa fa-pencil-square-o"></i> Edit Matches</a>
 										</div>
 									</div>
-									<!-- Clothes matches here -->
+									<div class="clothes_gallery">
+										<!-- Clothes here -->
+									</div>
 								</div>
-								<div class="x_content" id="cancel" style="display:none">
+								<div class="x_content" id="done" style="display:none">
 									<div class="form-group pull-right">
 										<div class="col-md-12 col-sm-12 col-xs-12">
-											<a class="btn btn-default" onclick="cancelMatches()"><i class="fa fa-remove"></i> Cancel</a>
+											<a class="btn btn-success" onclick="doneMatches()"><i class="fa fa-check"></i> Done</a>
 										</div>
 									</div>
-									<div class="clothes_to_match">
+									<div class="clothes_gallery">
 										<!-- Clothes to match here -->
 									</div>
 								</div>
@@ -204,33 +206,21 @@ else $success = 0;
 	// On ready function
 	$(document).ready(function () {
 		getClothesDetail( <?php echo '"'.$id.'"'; ?> );
+		getCategory();
 		getMatches( <?php echo '"'.$id.'"'; ?> );
-		getLayers( <?php echo '"'.$id.'"'; ?> );
 	});
-	// Show-hide button cancel matches
-	function cancelMatches() {
+	// Show-hide button done matches
+	function doneMatches() {
 		document.getElementById("matches").style="display:block";
-		document.getElementById("cancel").style="display:none";
+		document.getElementById("done").style="display:none";
+		location.reload();
 	}
 	// Show-hide button edit matches
 	function editMatches() {
 		document.getElementById("matches").style="display:none";
-		document.getElementById("cancel").style="display:block";
-		getClothesToMatch( <?php echo '"'.$id.'"'; ?> );	
+		document.getElementById("done").style="display:block";
+		getClothesToMatch( <?php echo '"'.$id.'"'; ?> );
 	}
-	// Show-hide button cancel matches
-	function cancelLayers() {
-		document.getElementById("layers").style="display:block";
-		document.getElementById("cancel_layer").style="display:none";
-	}
-
-	// Show-hide button edit matches
-	function editLayers(){
-		document.getElementById("layers").style="display:none";
-		document.getElementById("cancel_layer").style="display:block";
-		getClothesToLayer( <?php echo '"'.$id.'"'; ?> );	
-	}
-
 
 	// Notification
 	if(<?php echo $success ?>) {

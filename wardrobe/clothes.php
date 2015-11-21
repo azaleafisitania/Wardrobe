@@ -81,8 +81,7 @@ else $category = $_GET['category'];
     <?php include "script.php"; ?>
     <script>
     $(document).ready(function () {
-    	$(".clothes_title").append('<h3><i class="fa fa-folder-open"></i> <a href="clothes.php">Clothes</a> <i class="fa fa-angle-right"></i> <?php echo ucfirst($category); ?></h3>');
-        getCategory("<?php echo $category; ?>");
+    	getCategory("<?php echo $category; ?>");
         getClothes("<?php echo $category; ?>");
     });
     </script>

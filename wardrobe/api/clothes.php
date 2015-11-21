@@ -35,7 +35,7 @@ if($_SESSION['db_mode']=="MySQL") {
 		}
 	// Fail
 	} else {
-		error_log('Wardrobe: query select clothes returns no result in '.__FILE__.' on line '.__LINE__);
+		error_log('Wardrobe: query select clothes returns no result in '.__FILE__);
 	}
 
 // Neo4j
@@ -47,7 +47,7 @@ if($_SESSION['db_mode']=="MySQL") {
 		$CATEGORY = "";
 	}
 	// Query SELECT clothes
-	$query = "MATCH (u:User)-[:OWN]->(n:Clothes) WHERE u.username = '".$username."' $CATEGORY RETURN n";
+	$query = "MATCH (u:User)-[:OWN]->(n:Clothes) WHERE u.username = '".$username."' $CATEGORY RETURN n ORDER BY n.category";
 	$response = $client->sendCypherQuery($query)->getRows();
 	$clothes_all = $response['n'];
 	// Result
@@ -68,7 +68,7 @@ if($_SESSION['db_mode']=="MySQL") {
 			));
 		}
 	} else {
-		error_log('Wardrobe: query select clothes returns no result in '.__FILE__.' on line '.__LINE__);
+		error_log('Wardrobe: query select clothes returns no result in '.__FILE__);
 	}
 }
 

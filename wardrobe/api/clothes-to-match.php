@@ -3,7 +3,7 @@
 if(isset($_GET["id"])) {
 	$id = $_GET["id"];
 } else {
-	error_log('Wardrobe: clothes id  not set'.__FILE__.' line '.__LINE__);
+	error_log('Wardrobe: clothes id  not set'.__FILE__);
 }
 session_start(); // Session
 $username = $_SESSION['username'];
@@ -29,22 +29,29 @@ if($_SESSION['db_mode']=="MySQL") {
 		}
 	}
 	// Query SELECT, get all clothes
-	$query = "SELECT * FROM clothes WHERE owner = '$username' ORDER BY category";
+	$query = "SELECT * FROM clothes WHERE owner = '$username' AND id<>$id ORDER BY category";
 	$result = mysql_query($query,$db);
 	// Push data
 	if($result) {
 		while($row = mysql_fetch_array($result)) {
 			if(in_array($row["id"],$matches_id)) {
-				$match = 1;
+				$checked = "checked";
 			} else {
-				$match = 0;
+				$checked = "";
 			}
+			// Photo
+			if(($row['photo'])&&(file_exists("../images/".$username."/".$row['photo']))) {
+				$photo = "images/".$username."/".$row['photo'];
+			} else {
+				$photo = "images/Photo Here.jpg";
+			}
+			// Push data
 			array_push($data, array(
 				"id" => $row["id"],
-				"photo" => $row["photo"],
+				"photo" => $photo,
 				"category" => $row["category"],
 				"owner" => $row["owner"],
-				"match" => $match
+				"checked" => $checked
 			));
 		}
 	}
@@ -54,9 +61,13 @@ if($_SESSION['db_mode']=="MySQL") {
 	// Query SELECT, get matches
 	$query = "MATCH (n:Clothes)-[:MATCH]->(m:Clothes) WHERE n.name = '$id' RETURN m.name";
 	$response = $client->sendCypherQuery($query)->getRows();
-	$matches_id = $response['m.name'];
-	
-	$query2 = "MATCH (u:User)-[:OWN]->(n:Clothes) WHERE u.username = '$username' RETURN n";
+	if(!empty($response)) {
+		$matches_id = $response['m.name'];
+		// Query SELECT, get all clothes	
+	} else {
+		error_log('Wardrobe: clothes id $id has no matching clothes in '.__FILE__);
+	}
+	$query2 = "MATCH (u:User)-[:OWN]->(n:Clothes) WHERE u.username = '$username' RETURN n ORDER BY n.category";
 	$response2 = $client->sendCypherQuery($query2)->getRows();
 	if(!empty($response2)) {
 		$clothes_all = $response2['n'];
@@ -67,9 +78,16 @@ if($_SESSION['db_mode']=="MySQL") {
 			} else {
 				$match = 0;
 			}
+			// Photo
+			if(($clothes['photo'])&&(file_exists("../images/".$username."/".$clothes['photo']))) {
+				$photo = "images/".$username."/".$clothes['photo'];
+			} else {
+				$photo = "images/Photo Here.jpg";
+			}
+			// Push data 
 			array_push($data, array(
 				"id" => $clothes["name"],
-				"photo" => $clothes["photo"],
+				"photo" => $photo,
 				"category" => $clothes["category"],
 				"owner" => $username,
 				"match" => $match
