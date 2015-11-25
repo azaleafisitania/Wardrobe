@@ -1,11 +1,11 @@
 <?php
+// Session
 session_start();
+if (session_status() == PHP_SESSION_NONE) session_start();
+if(!isset($_SESSION['username'])) header("Location: login.php");
+if(!isset($_SESSION['img_mode'])) $_SESSION['img_mode'] = "URL";
 
-// Check session user
-if(!isset($_SESSION['username'])) {
-    header("Location: login.php");
-}
-// Validate if parameter is set
+// Parameters
 if(!isset($_GET['category'])) $category = "";
 else $category = $_GET['category'];
 ?>
@@ -82,7 +82,7 @@ else $category = $_GET['category'];
     <script>
     $(document).ready(function () {
     	getCategory("<?php echo $category; ?>");
-        getClothes("<?php echo $category; ?>");
+        getClothes("<?php echo $category; ?>","<?php echo $_SESSION['img_mode']; ?>");
     });
     </script>
 </body>

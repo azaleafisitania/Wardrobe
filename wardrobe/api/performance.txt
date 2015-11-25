@@ -1,0 +1,4791 @@
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.073896884918213 microsecond
+Memory usage: 64 byte
+2015-11-24 07:11:21
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.049192905426025 microsecond
+Memory usage: 64 byte
+2015-11-24 07:11:40
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.0052549839019775 microsecond
+Memory usage: 64 byte
+2015-11-24 07:11:45
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.00679612159729 microsecond
+Memory usage: 64 byte
+2015-11-24 07:11:52
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.0060610771179199 microsecond
+Memory usage: 64 byte
+2015-11-24 07:11:11
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 2.4207000732422 microsecond
+Memory usage: 64 byte
+2015-11-24 07:11:04
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.050926208496094 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:15
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.055932998657227 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:17
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.050276041030884 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:19
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.054482936859131 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:21
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.051666975021362 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:21
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.21341395378113 microsecond
+Memory usage: 73640 byte
+2015-11-24 07:11:22
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.056478023529053 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:28
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043121099472046 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:28
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.067511081695557 microsecond
+Memory usage: 1688 byte
+2015-11-24 07:11:28
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.071526050567627 microsecond
+Memory usage: 4464 byte
+2015-11-24 07:11:28
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.049913883209229 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:39
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.043012857437134 microsecond
+Memory usage: 1688 byte
+2015-11-24 07:11:39
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.044129848480225 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:39
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.051156997680664 microsecond
+Memory usage: 4464 byte
+2015-11-24 07:11:39
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.16482210159302 microsecond
+Memory usage: 1208 byte
+2015-11-24 07:11:42
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.37813806533813 microsecond
+Memory usage: 1208 byte
+2015-11-24 07:11:43
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.048655033111572 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:45
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.042546033859253 microsecond
+Memory usage: 1688 byte
+2015-11-24 07:11:45
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043967008590698 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:45
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.041594982147217 microsecond
+Memory usage: 3104 byte
+2015-11-24 07:11:45
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.10651397705078 microsecond
+Memory usage: 1208 byte
+2015-11-24 07:11:49
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.044985055923462 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:50
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.043148040771484 microsecond
+Memory usage: 1688 byte
+2015-11-24 07:11:50
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.050920009613037 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:50
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.045902967453003 microsecond
+Memory usage: 4464 byte
+2015-11-24 07:11:51
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.04431414604187 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:26
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.039485931396484 microsecond
+Memory usage: 1688 byte
+2015-11-24 07:11:26
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.050091981887817 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:26
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.05457615852356 microsecond
+Memory usage: 4464 byte
+2015-11-24 07:11:27
+
+File: add-clothes.php, Mode: MySQL 
+
+File: add-clothes.php, Mode: MySQL 
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0010271072387695 microsecond
+Memory usage: 64 byte
+2015-11-24 07:11:36
+
+File: clothes-detail.php, Mode: MySQL 
+
+Function: select clothes detail by id
+Execution time: 0.014940023422241 microsecond
+Memory usage: 64 byte
+2015-11-24 07:11:36
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.00096487998962402 microsecond
+Memory usage: 64 byte
+2015-11-24 07:11:36
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: delete clothes
+Execution time: 0.0028209686279297 microsecond
+Memory usage: 64 byte
+2015-11-24 07:11:36
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.050535917282104 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:54
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.040426015853882 microsecond
+Memory usage: 1688 byte
+2015-11-24 07:11:54
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.044568061828613 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:55
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.038758039474487 microsecond
+Memory usage: 4464 byte
+2015-11-24 07:11:55
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045317888259888 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:11
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.041079044342041 microsecond
+Memory usage: 1688 byte
+2015-11-24 07:11:11
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045222043991089 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:11
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.042572975158691 microsecond
+Memory usage: 4464 byte
+2015-11-24 07:11:11
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.047168970108032 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:12
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045109033584595 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:12
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.057935953140259 microsecond
+Memory usage: 73656 byte
+2015-11-24 07:11:12
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: insert outfit
+Execution time: 0.13812112808228 microsecond
+Memory usage: 1208 byte
+2015-11-24 07:11:50
+
+Function: insert creates
+Execution time: 0.045150995254517 microsecond
+Memory usage: 1208 byte
+2015-11-24 07:11:50
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.067312002182007 microsecond
+Memory usage: 824 byte
+2015-11-24 07:11:50
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.088495016098022 microsecond
+Memory usage: 112 byte
+2015-11-24 07:11:51
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.04967999458313 microsecond
+Memory usage: 112 byte
+2015-11-24 08:11:05
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.054264783859253 microsecond
+Memory usage: 824 byte
+2015-11-24 08:11:46
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.04797887802124 microsecond
+Memory usage: 112 byte
+2015-11-24 08:11:46
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete outfit
+Execution time: 0.066987991333008 microsecond
+Memory usage: 1208 byte
+2015-11-24 08:11:47
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.074033975601196 microsecond
+Memory usage: 824 byte
+2015-11-24 08:11:48
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: select all outfits with clothes
+Execution time: 0.11979293823242 microsecond
+Memory usage: 73328 byte
+2015-11-24 08:11:48
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.056211948394775 microsecond
+Memory usage: 824 byte
+2015-11-24 08:11:54
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045001983642578 microsecond
+Memory usage: 824 byte
+2015-11-24 08:11:54
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.059637069702148 microsecond
+Memory usage: 73656 byte
+2015-11-24 08:11:55
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: insert outfit
+Execution time: 0.072731018066406 microsecond
+Memory usage: 1208 byte
+2015-11-24 08:11:57
+
+Function: insert creates
+Execution time: 0.13328981399536 microsecond
+Memory usage: 1208 byte
+2015-11-24 08:11:58
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.048906803131104 microsecond
+Memory usage: 824 byte
+2015-11-24 08:11:58
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.090427160263062 microsecond
+Memory usage: 21216 byte
+2015-11-24 08:11:58
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.041467905044556 microsecond
+Memory usage: 824 byte
+2015-11-24 08:11:05
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.047238111495972 microsecond
+Memory usage: 824 byte
+2015-11-24 08:11:09
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.051602125167847 microsecond
+Memory usage: 21216 byte
+2015-11-24 08:11:09
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.066099882125854 microsecond
+Memory usage: 21216 byte
+2015-11-24 08:11:25
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.057157039642334 microsecond
+Memory usage: 824 byte
+2015-11-24 08:11:34
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.046877861022949 microsecond
+Memory usage: 21216 byte
+2015-11-24 08:11:34
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete outfit
+Execution time: 0.097387075424194 microsecond
+Memory usage: 1208 byte
+2015-11-24 08:11:38
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.083822011947632 microsecond
+Memory usage: 824 byte
+2015-11-24 08:11:38
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: select all outfits with clothes
+Execution time: 0.085072040557861 microsecond
+Memory usage: 73328 byte
+2015-11-24 08:11:39
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061414957046509 microsecond
+Memory usage: 824 byte
+2015-11-24 08:11:20
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.096530199050903 microsecond
+Memory usage: 824 byte
+2015-11-24 08:11:24
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: select all outfits with clothes
+Execution time: 0.059717893600464 microsecond
+Memory usage: 73328 byte
+2015-11-24 08:11:25
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.047229051589966 microsecond
+Memory usage: 64 byte
+2015-11-24 11:11:07
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 5.5721011161804 microsecond
+Memory usage: 824 byte
+2015-11-24 11:11:20
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.094434976577759 microsecond
+Memory usage: 824 byte
+2015-11-24 11:11:24
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.050309896469116 microsecond
+Memory usage: 824 byte
+2015-11-24 11:11:25
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.3741500377655 microsecond
+Memory usage: 73640 byte
+2015-11-24 11:11:25
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.073858022689819 microsecond
+Memory usage: 824 byte
+2015-11-24 11:11:34
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.073438882827759 microsecond
+Memory usage: 824 byte
+2015-11-24 11:11:34
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.10116982460022 microsecond
+Memory usage: 1688 byte
+2015-11-24 11:11:35
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.093799114227295 microsecond
+Memory usage: 4464 byte
+2015-11-24 11:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.082764863967896 microsecond
+Memory usage: 824 byte
+2015-11-24 11:11:28
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043371915817261 microsecond
+Memory usage: 824 byte
+2015-11-24 11:11:28
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.05949592590332 microsecond
+Memory usage: 73656 byte
+2015-11-24 11:11:29
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.069283962249756 microsecond
+Memory usage: 824 byte
+2015-11-24 11:11:30
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.049433946609497 microsecond
+Memory usage: 824 byte
+2015-11-24 11:11:31
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.1278510093689 microsecond
+Memory usage: 824 byte
+2015-11-24 11:11:33
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: select all outfits with clothes
+Execution time: 0.18582797050476 microsecond
+Memory usage: 73328 byte
+2015-11-24 11:11:33
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.083680152893066 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:01
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.054187059402466 microsecond
+Memory usage: 1680 byte
+2015-11-25 12:11:01
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.046865940093994 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:02
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.051931858062744 microsecond
+Memory usage: 14160 byte
+2015-11-25 12:11:02
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: edit clothes
+Execution time: 0.69362211227417 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:36
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.067442893981934 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:37
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.051731109619141 microsecond
+Memory usage: 105096 byte
+2015-11-25 12:11:37
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.047656059265137 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:37
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.050496816635132 microsecond
+Memory usage: 14160 byte
+2015-11-25 12:11:37
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.071090936660767 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:42
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043565034866333 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:43
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.066557884216309 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:43
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.082911014556885 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:30
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.078781843185425 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:30
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.051697015762329 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:30
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.050021886825562 microsecond
+Memory usage: 14168 byte
+2015-11-25 12:11:31
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.47226881980896 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:50
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.066087007522583 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:51
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.043522119522095 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:52
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.055114030838013 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:52
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.042379140853882 microsecond
+Memory usage: 9984 byte
+2015-11-25 12:11:52
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.19850206375122 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:55
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.075277090072632 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:56
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.043446063995361 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:56
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.052284002304077 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:56
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.050153017044067 microsecond
+Memory usage: 11360 byte
+2015-11-25 12:11:56
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.062055110931396 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:25
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.051060199737549 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:25
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.069416046142578 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:25
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061362981796265 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:27
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.043128967285156 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:27
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.050521850585938 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:27
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.044121026992798 microsecond
+Memory usage: 4464 byte
+2015-11-25 12:11:27
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.079518795013428 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:30
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.069447994232178 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:30
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.056704998016357 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:30
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.053642988204956 microsecond
+Memory usage: 5816 byte
+2015-11-25 12:11:30
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061830997467041 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:34
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.050809144973755 microsecond
+Memory usage: 1720 byte
+2015-11-25 12:11:34
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.049723863601685 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:34
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.067471027374268 microsecond
+Memory usage: 117520 byte
+2015-11-25 12:11:34
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.064451932907104 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:37
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.056394100189209 microsecond
+Memory usage: 1712 byte
+2015-11-25 12:11:37
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.058448076248169 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:37
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.067674875259399 microsecond
+Memory usage: 15528 byte
+2015-11-25 12:11:37
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.057931900024414 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:44
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.055330038070679 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:44
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.070673942565918 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:44
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.10527110099792 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:46
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.060822010040283 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:47
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.060835123062134 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:47
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.058963060379028 microsecond
+Memory usage: 15528 byte
+2015-11-25 12:11:47
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.077383995056152 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:49
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.047456026077271 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:50
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.075869083404541 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:50
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.091943979263306 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:51
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.052115201950073 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:52
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.058473825454712 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:52
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.071794986724854 microsecond
+Memory usage: 26720 byte
+2015-11-25 12:11:52
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.19492602348328 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:57
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.12597012519836 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:58
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.065155029296875 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:00
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.045655012130737 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:00
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.051143884658813 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:00
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.045171976089478 microsecond
+Memory usage: 23944 byte
+2015-11-25 12:11:00
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.078294038772583 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:05
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.067001104354858 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:05
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.051574945449829 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:05
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.10232210159302 microsecond
+Memory usage: 114760 byte
+2015-11-25 12:11:05
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.19073891639709 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:08
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.12312483787537 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:09
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.07184100151062 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:10
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.050778865814209 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:10
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.062142133712769 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:10
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.054008007049561 microsecond
+Memory usage: 111992 byte
+2015-11-25 12:11:10
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.059538125991821 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:13
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.051934003829956 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:13
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.068764925003052 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:13
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.060110092163086 microsecond
+Memory usage: 21136 byte
+2015-11-25 12:11:14
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.19948506355286 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:25
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.11493611335754 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:25
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.20760798454285 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:26
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.15556287765503 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:26
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.17950510978699 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:27
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.11514401435852 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:28
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.2207088470459 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:29
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.12760496139526 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:29
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.13991713523865 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:32
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.15324711799622 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:32
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.048862934112549 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.05280590057373 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.052153825759888 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.060766220092773 microsecond
+Memory usage: 14192 byte
+2015-11-25 12:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.075547933578491 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:39
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.075170040130615 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:39
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.089583158493042 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:39
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.058401107788086 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:43
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.042511940002441 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:43
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045434951782227 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:43
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.043933868408203 microsecond
+Memory usage: 15528 byte
+2015-11-25 12:11:44
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.078280925750732 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:46
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.044556856155396 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:47
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.067358016967773 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:47
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.055327892303467 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:48
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.046856164932251 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:48
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.053437948226929 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:48
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.058474779129028 microsecond
+Memory usage: 14192 byte
+2015-11-25 12:11:48
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.078387975692749 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:52
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.068297863006592 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:52
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.074329137802124 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:52
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.081529140472412 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:54
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.063777923583984 microsecond
+Memory usage: 1712 byte
+2015-11-25 12:11:54
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.054328918457031 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:54
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.062289953231812 microsecond
+Memory usage: 3072 byte
+2015-11-25 12:11:54
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.084383010864258 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:57
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.054018974304199 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:57
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.065531015396118 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:57
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.082494974136353 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:59
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.07709002494812 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:59
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.049560070037842 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:00
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.048055171966553 microsecond
+Memory usage: 4432 byte
+2015-11-25 12:11:00
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.074864149093628 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:02
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.079739093780518 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:02
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.085202932357788 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:03
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.056700944900513 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:04
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.04121994972229 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:05
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.0453941822052 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:05
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.042108774185181 microsecond
+Memory usage: 5816 byte
+2015-11-25 12:11:05
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061215162277222 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:08
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043285846710205 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:08
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.06582498550415 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:08
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.088917016983032 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:09
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.083277940750122 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:09
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.053894996643066 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:10
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.049501895904541 microsecond
+Memory usage: 8624 byte
+2015-11-25 12:11:10
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.086917877197266 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:13
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.041759967803955 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:13
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.058733940124512 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:14
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.054094791412354 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.051259994506836 microsecond
+Memory usage: 1680 byte
+2015-11-25 12:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045141935348511 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.04342794418335 microsecond
+Memory usage: 112 byte
+2015-11-25 12:11:35
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.10773205757141 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:51
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.15330791473389 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:58
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.14297890663147 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:58
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.14458608627319 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:00
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.070280075073242 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:01
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.10488700866699 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:09
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.044015169143677 microsecond
+Memory usage: 1680 byte
+2015-11-25 12:11:09
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042591094970703 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:09
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.045808076858521 microsecond
+Memory usage: 4448 byte
+2015-11-25 12:11:09
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.065826892852783 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:12
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.046991109848022 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:12
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.06409215927124 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:12
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.056351900100708 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:14
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.047284126281738 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:14
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.046130895614624 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:14
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.060374021530151 microsecond
+Memory usage: 12752 byte
+2015-11-25 12:11:14
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.069241046905518 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:17
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.065961122512817 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:17
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.063140869140625 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:18
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.079812049865723 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:19
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.072075128555298 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:19
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043938875198364 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:20
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.052042007446289 microsecond
+Memory usage: 8664 byte
+2015-11-25 12:11:20
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.079797029495239 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:23
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061896085739136 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:23
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.059814214706421 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:23
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.055537223815918 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:25
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.061681985855103 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:25
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.056165933609009 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:25
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.04792594909668 microsecond
+Memory usage: 4440 byte
+2015-11-25 12:11:25
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.076771020889282 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:30
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061402082443237 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:30
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.063585042953491 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:30
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.071862936019897 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:32
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.048597097396851 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:32
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.048290967941284 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:32
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.05861496925354 microsecond
+Memory usage: 29376 byte
+2015-11-25 12:11:32
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.058150053024292 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:38
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.046409845352173 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:39
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.062795877456665 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:39
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.063838005065918 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:43
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.045727968215942 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:43
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.041409015655518 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:43
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.057576894760132 microsecond
+Memory usage: 29376 byte
+2015-11-25 12:11:43
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.087507963180542 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:46
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042691946029663 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:46
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.068412065505981 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:46
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.054422855377197 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:50
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.047466993331909 microsecond
+Memory usage: 1720 byte
+2015-11-25 12:11:50
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.041804075241089 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:50
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.056402921676636 microsecond
+Memory usage: 1720 byte
+2015-11-25 12:11:50
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.10089087486267 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:03
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.11189198493958 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:06
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.18942189216614 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:07
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.072912931442261 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:16
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.050183057785034 microsecond
+Memory usage: 1720 byte
+2015-11-25 12:11:16
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.054555892944336 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:17
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.038618803024292 microsecond
+Memory usage: 3080 byte
+2015-11-25 12:11:17
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.082475900650024 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:20
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.070480108261108 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:20
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.076712131500244 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:20
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.086867094039917 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:27
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.070641040802002 microsecond
+Memory usage: 1712 byte
+2015-11-25 12:11:27
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.051866054534912 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:27
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.049798011779785 microsecond
+Memory usage: 25256 byte
+2015-11-25 12:11:28
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061798095703125 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042572975158691 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.081021070480347 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.08505916595459 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:38
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.055604934692383 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:38
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043729066848755 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:38
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.051452875137329 microsecond
+Memory usage: 10040 byte
+2015-11-25 12:11:38
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.073483943939209 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:42
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.056051015853882 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:43
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.071058034896851 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:43
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.075416088104248 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:45
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.04746413230896 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:45
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.055284023284912 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:45
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.065016031265259 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:45
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.074674844741821 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:48
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.039854049682617 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:49
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.058322906494141 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:49
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.048811912536621 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:50
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.054087162017822 microsecond
+Memory usage: 1712 byte
+2015-11-25 12:11:51
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045207977294922 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:51
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.047778844833374 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:51
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.073562860488892 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:53
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.041376113891602 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:54
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.063868045806885 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:54
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.077116966247559 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:55
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.046129941940308 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:55
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.046856880187988 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:56
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.04339599609375 microsecond
+Memory usage: 7192 byte
+2015-11-25 12:11:56
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.11940503120422 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:04
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.063163995742798 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:16
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.041527032852173 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:17
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.047380924224854 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:17
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.047698974609375 microsecond
+Memory usage: 8568 byte
+2015-11-25 12:11:17
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.063148021697998 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:18
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045024871826172 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:18
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.06350302696228 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:18
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.090322017669678 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:23
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.066897869110107 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:23
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.05597996711731 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:23
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.062126159667969 microsecond
+Memory usage: 11368 byte
+2015-11-25 12:11:24
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.047150850296021 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:28
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.073071956634521 microsecond
+Memory usage: 440 byte
+2015-11-25 12:11:28
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.081404209136963 microsecond
+Memory usage: 32192 byte
+2015-11-25 12:11:28
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.080632209777832 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:31
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.065148115158081 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:31
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.044363021850586 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:32
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.061398029327393 microsecond
+Memory usage: 7192 byte
+2015-11-25 12:11:32
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.11455297470093 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043058156967163 microsecond
+Memory usage: 440 byte
+2015-11-25 12:11:35
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.055793046951294 microsecond
+Memory usage: 32192 byte
+2015-11-25 12:11:36
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.055417060852051 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:41
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.046367883682251 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:41
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.059699058532715 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:41
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.057430982589722 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:41
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.056005001068115 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:43
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.041456937789917 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:43
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.061466932296753 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:43
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.083741903305054 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:46
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.066612958908081 microsecond
+Memory usage: 1712 byte
+2015-11-25 12:11:46
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.044142961502075 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:46
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.061890840530396 microsecond
+Memory usage: 10008 byte
+2015-11-25 12:11:46
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.082291126251221 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:50
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.057877063751221 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:50
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.085332155227661 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:50
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.080922842025757 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:52
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.069372892379761 microsecond
+Memory usage: 1736 byte
+2015-11-25 12:11:52
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.040757179260254 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:52
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.062912940979004 microsecond
+Memory usage: 9968 byte
+2015-11-25 12:11:53
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.056682825088501 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:57
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.064414978027344 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:57
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.061990976333618 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:57
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.052378177642822 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:08
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.038494825363159 microsecond
+Memory usage: 1720 byte
+2015-11-25 12:11:08
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042988061904907 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:08
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.037614822387695 microsecond
+Memory usage: 3080 byte
+2015-11-25 12:11:08
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.05997109413147 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:17
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.040725946426392 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:18
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.061723947525024 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:18
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.06630802154541 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:21
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.051768064498901 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:21
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.054571866989136 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:21
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.047183036804199 microsecond
+Memory usage: 11400 byte
+2015-11-25 12:11:21
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.056725025177002 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:25
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.041643857955933 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:25
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.062126874923706 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:25
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.07382607460022 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:27
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.044025897979736 microsecond
+Memory usage: 1712 byte
+2015-11-25 12:11:27
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042634963989258 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:28
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.043170928955078 microsecond
+Memory usage: 112 byte
+2015-11-25 12:11:28
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.0520339012146 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:31
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.056014060974121 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:31
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.064688920974731 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:31
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.079649925231934 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:33
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.067322969436646 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:33
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043704032897949 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:34
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.048627138137817 microsecond
+Memory usage: 26672 byte
+2015-11-25 12:11:34
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.075401067733765 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:38
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.048125028610229 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:38
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.06415319442749 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:38
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.085880994796753 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:40
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.053384065628052 microsecond
+Memory usage: 1680 byte
+2015-11-25 12:11:40
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.04809308052063 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:40
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.047955989837646 microsecond
+Memory usage: 9992 byte
+2015-11-25 12:11:40
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.079061031341553 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:44
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.067476987838745 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:44
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.069621801376343 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:44
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061994791030884 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:46
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.067392110824585 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:47
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.052940130233765 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:47
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.051848173141479 microsecond
+Memory usage: 112 byte
+2015-11-25 12:11:47
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.079866886138916 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:50
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.058602094650269 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:50
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.064594030380249 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:51
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.064993143081665 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:52
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.052969932556152 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:52
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.041903018951416 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:52
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.049633026123047 microsecond
+Memory usage: 3096 byte
+2015-11-25 12:11:52
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.07381796836853 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:55
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.04518985748291 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:55
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.067757844924927 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:55
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.078493118286133 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:58
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.13199782371521 microsecond
+Memory usage: 105096 byte
+2015-11-25 12:11:58
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.087547063827515 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:58
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.061743021011353 microsecond
+Memory usage: 14160 byte
+2015-11-25 12:11:58
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.07300591468811 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:04
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.040201902389526 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:04
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.060122013092041 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:04
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.083333969116211 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:06
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.069368839263916 microsecond
+Memory usage: 1712 byte
+2015-11-25 12:11:06
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.04475998878479 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:06
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.048015117645264 microsecond
+Memory usage: 22472 byte
+2015-11-25 12:11:07
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.04903507232666 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:31
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042598009109497 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:31
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.062201023101807 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:31
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.074923992156982 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.050017118453979 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045072793960571 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.079905033111572 microsecond
+Memory usage: 11360 byte
+2015-11-25 12:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.07571005821228 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:41
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043793916702271 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:41
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.072046995162964 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:41
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.064424991607666 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:45
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.038170099258423 microsecond
+Memory usage: 1712 byte
+2015-11-25 12:11:45
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.046784162521362 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:45
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.05798602104187 microsecond
+Memory usage: 15528 byte
+2015-11-25 12:11:45
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.049052000045776 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:49
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042540073394775 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:50
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.059939861297607 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:50
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.064438104629517 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:54
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.050597906112671 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:54
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.041265964508057 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:54
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.055638074874878 microsecond
+Memory usage: 109232 byte
+2015-11-25 12:11:54
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.066282987594604 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:01
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.049968004226685 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:01
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.078109979629517 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:01
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.048192977905273 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:05
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.048905849456787 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:05
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045789957046509 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:05
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.062768936157227 microsecond
+Memory usage: 121672 byte
+2015-11-25 12:11:05
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.054465055465698 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:11
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.046318054199219 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:11
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.058019161224365 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:11
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.076913833618164 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:15
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.074554920196533 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:15
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045520067214966 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:15
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.074394941329956 microsecond
+Memory usage: 114760 byte
+2015-11-25 12:11:16
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.076746940612793 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:19
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.075478792190552 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:19
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.10605692863464 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:20
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.082873106002808 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:23
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.061288118362427 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:23
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042253017425537 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:24
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.062558889389038 microsecond
+Memory usage: 125808 byte
+2015-11-25 12:11:24
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.071637153625488 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:29
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.072351932525635 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:29
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.060946941375732 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:29
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.063812971115112 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:32
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.059803009033203 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:33
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.048690795898438 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:33
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.068398952484131 microsecond
+Memory usage: 110600 byte
+2015-11-25 12:11:33
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.072332143783569 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:42
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.052794933319092 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:42
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.040968894958496 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:43
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.049393892288208 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:47
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.048995018005371 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:47
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.050567150115967 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:47
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.054548025131226 microsecond
+Memory usage: 3088 byte
+2015-11-25 12:11:47
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.072030067443848 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:53
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061460971832275 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:53
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.057536840438843 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:54
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.074250936508179 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:56
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.044287919998169 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:57
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042662143707275 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:57
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.044892072677612 microsecond
+Memory usage: 3088 byte
+2015-11-25 12:11:57
+
+File: add-clothes.php, Mode: Neo4j 
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.14550614356995 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:01
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.16592717170715 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:02
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: add matches
+Execution time: 0.35817694664001 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:04
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: remove clothes from matches by id
+Execution time: 0.18145203590393 microsecond
+Memory usage: 1208 byte
+2015-11-25 12:11:04
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.076052904129028 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:07
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.043443918228149 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:07
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042704105377197 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:07
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.053500890731812 microsecond
+Memory usage: 109256 byte
+2015-11-25 12:11:07
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.090498208999634 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:11
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061137914657593 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:11
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.060280084609985 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:11
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.07559609413147 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:13
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.067504167556763 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:13
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.041308879852295 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:13
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.043632984161377 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:14
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.075093984603882 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:16
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.067805051803589 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:16
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.063760995864868 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:16
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.072350978851318 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:19
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.049299001693726 microsecond
+Memory usage: 1712 byte
+2015-11-25 12:11:20
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.044132947921753 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:20
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.061154127120972 microsecond
+Memory usage: 118888 byte
+2015-11-25 12:11:20
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.068714141845703 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:24
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.10876297950745 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:24
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.041908025741577 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:24
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.066696166992188 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:27
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.055963039398193 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:27
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045464038848877 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:27
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.056334972381592 microsecond
+Memory usage: 110600 byte
+2015-11-25 12:11:27
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.083705186843872 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:32
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.048498868942261 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:33
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.050541877746582 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:33
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.044183969497681 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.044679880142212 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.0397629737854 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.044183015823364 microsecond
+Memory usage: 112 byte
+2015-11-25 12:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.048983097076416 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:37
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.050261974334717 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:37
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.050429105758667 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:37
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.069105863571167 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:39
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.07539701461792 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:40
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.04040789604187 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:40
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.043551206588745 microsecond
+Memory usage: 5832 byte
+2015-11-25 12:11:40
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.082130908966064 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:44
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.055608987808228 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:45
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.04469108581543 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:45
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.076427936553955 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:47
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.073532104492188 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:47
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.047595977783203 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:47
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.057256937026978 microsecond
+Memory usage: 117512 byte
+2015-11-25 12:11:47
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061434984207153 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:52
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.04572582244873 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:53
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.048434019088745 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:53
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.068307876586914 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:55
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.043004035949707 microsecond
+Memory usage: 1720 byte
+2015-11-25 12:11:56
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042992115020752 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:56
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.057593107223511 microsecond
+Memory usage: 117520 byte
+2015-11-25 12:11:56
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.078278064727783 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:00
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.066676139831543 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:00
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.052906036376953 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:00
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.075216054916382 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:02
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.062386989593506 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:02
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.042426824569702 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:02
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.052887201309204 microsecond
+Memory usage: 113352 byte
+2015-11-25 12:11:03
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.068994045257568 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:06
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.040276050567627 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:06
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.042160034179688 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:06
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.055482149124146 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:09
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.047321081161499 microsecond
+Memory usage: 1720 byte
+2015-11-25 12:11:09
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.046396970748901 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:09
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.073524951934814 microsecond
+Memory usage: 9960 byte
+2015-11-25 12:11:09
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.054513931274414 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:12
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.039780855178833 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:13
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.042273044586182 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:13
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.079502105712891 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:15
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.070934057235718 microsecond
+Memory usage: 1704 byte
+2015-11-25 12:11:15
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.053125858306885 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:15
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.054683923721313 microsecond
+Memory usage: 11360 byte
+2015-11-25 12:11:15
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.09012508392334 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:19
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.040773153305054 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:20
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.04223108291626 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:20
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.052748918533325 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:23
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.046308994293213 microsecond
+Memory usage: 1688 byte
+2015-11-25 12:11:23
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.051384925842285 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:23
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.064517021179199 microsecond
+Memory usage: 11304 byte
+2015-11-25 12:11:23
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.081214904785156 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:26
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.069169044494629 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:26
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.056317090988159 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:27
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.061398983001709 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:29
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.04879903793335 microsecond
+Memory usage: 1696 byte
+2015-11-25 12:11:29
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.045804023742676 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:29
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.053638935089111 microsecond
+Memory usage: 14120 byte
+2015-11-25 12:11:29
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.079814195632935 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:33
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043339014053345 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:33
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.041582107543945 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:33
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.073809146881104 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:35
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.057075023651123 microsecond
+Memory usage: 1720 byte
+2015-11-25 12:11:35
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.043276071548462 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:36
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.10114908218384 microsecond
+Memory usage: 16912 byte
+2015-11-25 12:11:36
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.088364839553833 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:40
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.060876131057739 microsecond
+Memory usage: 424 byte
+2015-11-25 12:11:40
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.042646169662476 microsecond
+Memory usage: 28008 byte
+2015-11-25 12:11:40
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.073798894882202 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:42
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.063299894332886 microsecond
+Memory usage: 1680 byte
+2015-11-25 12:11:42
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.052088022232056 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:42
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.061059951782227 microsecond
+Memory usage: 11336 byte
+2015-11-25 12:11:42
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.068082094192505 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:46
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.041280031204224 microsecond
+Memory usage: 824 byte
+2015-11-25 12:11:46
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.062171936035156 microsecond
+Memory usage: 177048 byte
+2015-11-25 12:11:46
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0012838840484619 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:52
+
+File: clothes.php, Mode: MySQL 
+
+Function: select all clothes
+Execution time: 1.1544029712677 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:53
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0014791488647461 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:54
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.052254199981689 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:25
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: select all outfits with clothes
+Execution time: 0.18298387527466 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:25
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0019409656524658 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:36
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0019059181213379 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:36
+
+File: clothes.php, Mode: MySQL 
+
+Function: select all clothes
+Execution time: 0.20687294006348 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:37
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: insert outfit
+Execution time: 0.079529047012329 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:05
+
+Function: insert creates
+Execution time: 0.12172985076904 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:05
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.18612504005432 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:06
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: select outfit detail by id
+Execution time: 0.075624942779541 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:06
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0011570453643799 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:09
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0012691020965576 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:13
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: select outfit detail by id
+Execution time: 0.031907081604004 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:13
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.19556498527527 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:17
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0013120174407959 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:19
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: select outfit detail by id
+Execution time: 0.1205940246582 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:20
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0011770725250244 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:20
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: remove clothes from matches by id
+Execution time: 0.059803009033203 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:22
+
+File: add-to-outfit.php, Mode: MySQL 
+
+Function: add to outfit
+Execution time: 0.082194805145264 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:23
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.073263168334961 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:24
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: select outfit detail by id
+Execution time: 0.026262044906616 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:24
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.001215934753418 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:26
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: remove clothes from matches by id
+Execution time: 0.075888872146606 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:28
+
+File: add-to-outfit.php, Mode: MySQL 
+
+Function: add to outfit
+Execution time: 0.11846804618835 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:29
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0013279914855957 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:30
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: select outfit detail by id
+Execution time: 0.073532819747925 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:30
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.00099515914916992 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:31
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: remove clothes from matches by id
+Execution time: 0.10660600662231 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:34
+
+File: add-to-outfit.php, Mode: MySQL 
+
+Function: add to outfit
+Execution time: 0.16075396537781 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:35
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.02718186378479 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:37
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: select outfit detail by id
+Execution time: 0.067350149154663 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:37
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.001276969909668 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:39
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: remove clothes from matches by id
+Execution time: 0.082430124282837 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:42
+
+File: add-to-outfit.php, Mode: MySQL 
+
+Function: add to outfit
+Execution time: 0.080605983734131 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:42
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0013189315795898 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:45
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: select outfit detail by id
+Execution time: 0.07553505897522 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:45
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0012421607971191 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:48
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: remove clothes from matches by id
+Execution time: 0.12194895744324 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:49
+
+File: add-to-outfit.php, Mode: MySQL 
+
+Function: add to outfit
+Execution time: 0.24255299568176 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:50
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: remove clothes from matches by id
+Execution time: 0.14552187919617 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:50
+
+File: add-to-outfit.php, Mode: MySQL 
+
+Function: add to outfit
+Execution time: 0.082008838653564 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:51
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: remove clothes from matches by id
+Execution time: 0.093822956085205 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:52
+
+File: add-to-outfit.php, Mode: MySQL 
+
+Function: add to outfit
+Execution time: 0.067296981811523 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:52
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: remove clothes from matches by id
+Execution time: 0.088443994522095 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:54
+
+File: add-to-outfit.php, Mode: MySQL 
+
+Function: add to outfit
+Execution time: 0.079638957977295 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:54
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.057546854019165 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:57
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: select outfit detail by id
+Execution time: 0.072150945663452 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:57
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0016658306121826 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:18
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0015430450439453 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:18
+
+File: clothes-detail.php, Mode: MySQL 
+
+Function: select clothes detail by id
+Execution time: 0.0014457702636719 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:18
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: delete clothes
+Execution time: 0.051131963729858 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:18
+
+File: add-clothes.php, Mode: MySQL 
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: add matches
+Execution time: 0.075242042541504 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:27
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: add matches
+Execution time: 0.50458979606628 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:29
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: add matches
+Execution time: 0.067947149276733 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:34
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: remove clothes from matches by id
+Execution time: 0.07752513885498 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:39
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.039494037628174 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:42
+
+File: clothes-detail.php, Mode: MySQL 
+
+Function: select clothes detail by id
+Execution time: 0.010362148284912 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:42
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.0011568069458008 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:42
+
+File: add-clothes.php, Mode: MySQL 
+
+Function: delete clothes
+Execution time: 0.047392129898071 microsecond
+Memory usage: 64 byte
+2015-11-25 09:11:42
+
+File: categories.php, Mode: MySQL 
+
+Function: get categories
+Execution time: 0.013586044311523 microsecond
+Memory usage: 64 byte
+2015-11-25 10:11:47
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 1.1844449043274 microsecond
+Memory usage: 824 byte
+2015-11-25 10:11:33
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.10816788673401 microsecond
+Memory usage: 824 byte
+2015-11-25 10:11:36
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.088743925094604 microsecond
+Memory usage: 824 byte
+2015-11-25 10:11:38
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.055609941482544 microsecond
+Memory usage: 824 byte
+2015-11-25 10:11:38
+
+File: clothes.php, Mode: Neo4j 
+
+Function: select all clothes
+Execution time: 0.23696303367615 microsecond
+Memory usage: 73632 byte
+2015-11-25 10:11:38
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.076089143753052 microsecond
+Memory usage: 824 byte
+2015-11-25 10:11:43
+
+File: clothes-detail.php, Mode: Neo4j 
+
+Function: select clothes detail by id
+Execution time: 0.10824608802795 microsecond
+Memory usage: 1688 byte
+2015-11-25 10:11:43
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.050229072570801 microsecond
+Memory usage: 824 byte
+2015-11-25 10:11:43
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: delete clothes
+Execution time: 0.085293054580688 microsecond
+Memory usage: 15504 byte
+2015-11-25 10:11:43
+
+File: categories.php, Mode: Neo4j 
+
+Function: get categories
+Execution time: 0.10491108894348 microsecond
+Memory usage: 824 byte
+2015-11-25 10:11:47
+
+File: add-clothes.php, Mode: Neo4j 
+
+Function: select all outfits with clothes
+Execution time: 0.29876089096069 microsecond
+Memory usage: 86360 byte
+2015-11-25 10:11:48
+

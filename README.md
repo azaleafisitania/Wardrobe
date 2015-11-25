@@ -42,7 +42,7 @@ On Working Features:
 
 4. Auto-generate outfit (wip)
 
-5. User (try username "sista" password "sista")
+5. User
 
 	a. Login/Logout with session: MySQL, Neo4j (done)
 
@@ -54,17 +54,9 @@ On Working Features:
 
 	e. Delete (wip)
 
-6. Image in BLOB 
+6. Performance measurement between MySQL and Neo4j
 
-	a. View: (wip)
-
-	b. Insert: MySQL (done), Neo4j (wip)
-
-	c. Update: MySQL (done), Neo4j (wip)
-
-	d. Delete: MySQL (done), Neo4j (wip)
-
-Additional Features:
+Future Features:
 
 1. Clothes dictionary
 2. Calendar & Scheduling (wip)

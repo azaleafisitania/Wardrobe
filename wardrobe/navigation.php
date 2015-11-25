@@ -1,10 +1,11 @@
 <?php
+// Session
 if(!isset($_SESSION['db_mode'])) {
     $_SESSION['db_mode'] = "MySQL";
-    error_log('[Wardrobe] '.__FILE__.' line '.__LINE__.' : "database mode not defined. MySQL by default"');
+    error_log('Wardrobe Notice '.__FILE__.': database mode not defined. MySQL by default');
 }
 ?>
-			
+
 			<!-- sidebar -->
 			<div class="col-md-3 left_col">
 				<div class="left_col scroll-view">

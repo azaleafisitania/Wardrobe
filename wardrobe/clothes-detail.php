@@ -225,8 +225,8 @@ else $success = 0;
 	// Notification
 	if(<?php echo $success ?>) {
 		new PNotify({
-			title: 'Wonderful!',
-			text: 'You have successfully add this clothes',
+			title: 'Clothes Added!',
+			text: 'This clothes is now in the database',
 			type: 'success'
 		});
 	}

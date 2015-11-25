@@ -2,12 +2,42 @@
 // Set Database Mode
 function setDBMode(db_mode) {
 	$.ajax({
-		url: "session.php",
+		url: "api/session.php",
 		type: "GET",
-		data: { _db_mode: db_mode },
-		beforeSend: function(){
+		data: { db_mode: db_mode },
+		beforeSend: function() {
 		},
 		success: function(data,status) {
+			new PNotify({
+				title: 'Database Mode Changed!',
+				text: 'You are now using '+db_mode+' database. Refresh page',
+				type: 'dark',
+				nonblock: {
+					nonblock: true,
+					nonblock_opacity: .1
+				}
+			});
+		}
+	})
+}
+// Set Image Mode
+function setImgMode(img_mode) {
+	$.ajax({
+		url: "api/session.php",
+		type: "GET",
+		data: { img_mode: img_mode },
+		beforeSend: function() {
+		},
+		success: function(data,status) {
+			new PNotify({
+				title: 'Image Mode Changed!',
+				text: 'You are now using '+img_mode+' images. Refresh page',
+				type: 'dark',
+				nonblock: {
+					nonblock: true,
+					nonblock_opacity: .1
+				}
+			});
 		}
 	})
 }
@@ -104,7 +134,6 @@ function getClothes(category) {
 		type: "GET",
 		data: { category: category },
 		beforeSend: function() {
-
 		},
 		success: function(data,status) {
 			if(status=="success") {
@@ -120,7 +149,10 @@ function getClothes(category) {
 						}
 						// Append clothes
 						document.getElementById(clothes[i]['category']).style="display:block";
-						$("."+clothes[i]['category']+"").append('<a href="clothes-detail.php?id='+clothes[i]['id']+'"><img width=200 style="padding: .1em;" src="'+clothes[i]['photo']+'" /></a>');
+						elem = '<a href="clothes-detail.php?id='+clothes[i]['id']+'">';
+						elem += '<img width=200 style="padding: .1em;" src="'+clothes[i]['photo']+'" />';
+						elem +='</a>';
+						$("."+clothes[i]['category']+"").append(elem);
 					}	
 				}
 				if(category=="") {
@@ -279,7 +311,7 @@ function addMatch(id1,id2) {
 				type: 'dark',
 				nonblock: {
 					nonblock: true,
-					nonblock_opacity: .2
+					nonblock_opacity: .1
 				}
 			});
 		}
@@ -300,7 +332,7 @@ function removeMatch(id1,id2) {
 				type: 'dark',
 				nonblock: {
 					nonblock: true,
-					nonblock_opacity: .2
+					nonblock_opacity: .1
 				}
 			});
 		}
@@ -396,7 +428,7 @@ function addToOutfit(id1,id2) {
 				type: 'dark',
 				nonblock: {
 					nonblock: true,
-					nonblock_opacity: .2
+					nonblock_opacity: .1
 				}
 			});
 		}
@@ -417,7 +449,7 @@ function removeFromOutfit(id1,id2) {
 				type: 'dark',
 				nonblock: {
 					nonblock: true,
-					nonblock_opacity: .2
+					nonblock_opacity: .1
 				}
 			});
 		}

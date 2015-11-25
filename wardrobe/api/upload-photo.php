@@ -9,7 +9,7 @@ if (in_array($extension, $allowedExts)) {
 	// Check if upload error
 	if ($_FILES["file"]["error"] > 0) {
 		// Upload error
-		error_log('[Wardrobe] '.__FILE__.' line '.__LINE__.' : "photo upload error code '.$_FILES["file"]["error"].'"');
+		error_log('Wardrobe '.__FILE__.' : error uploading photo #code '.$_FILES["file"]["error"]);
 	} else {
 		
 		//echo "Upload: " . $_FILES["file"]["name"] . "<br>";
@@ -25,11 +25,11 @@ if (in_array($extension, $allowedExts)) {
 			//echo '<img src="data:image/jpg;base64,'.$blob_image_from_db.'"/>'; // Display BLOB to image
 			$uploadSuccess = 1;
 		} else {
-			error_log('[Wardrobe] '.__FILE__.' line '.__LINE__.' : "move uploaded file error"');
+			error_log('Wardrobe '.__FILE__.' : failed to move uploaded file to server');
 		}
 	}
 // File extension not valid
 } else {
-	error_log('[Wardrobe] '.__FILE__.' line '.__LINE__.' : "invalid file type"');
+	error_log('Wardrobe '.__FILE__.' : invalid file type');
 }
 ?>

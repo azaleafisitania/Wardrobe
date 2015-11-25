@@ -1,37 +1,39 @@
 <?php
-// Preparations
+// Parameters
 if(isset($_GET["id"])) {
 	$id = $_GET["id"];
 } else {
-	error_log('Wardrobe: clothes id not set in '.__FILE__.' on line '.__LINE__);
+	error_log('Wardrobe '.__FILE__.' : clothes id is not set');
 }
-session_start(); // Session
+
+// Session
+if (session_status() == PHP_SESSION_NONE) session_start();
 $username = $_SESSION['username']; 
-include "../db-connect.php"; // Connect
+
+// Performance measurement log
+include "performance-logger.php";
+fwrite($file, "File: add-clothes.php, Mode: ".$_SESSION['db_mode']." \n\n");
+
+include "db-connect.php"; // Connect
 $data = array(); // Data
+$error_message = 0;
 
 // MySQL
 if($_SESSION['db_mode']=="MySQL") {
-	// Query SELECT, get id of matches
-	$matches = array();
-	$query = "SELECT DISTINCT id_clothes2 FROM matches WHERE id_clothes1 = $id";
-	$result = mysql_query($query,$db);
-	if($result){
-		while($row = mysql_fetch_array($result)) {
-			array_push($matches, $row["id_clothes2"]);
-		}
-	}
-	$query = "SELECT DISTINCT id_clothes1 FROM matches WHERE id_clothes2 = $id";
-	$result = mysql_query($query,$db);
-	if($result){
-		while($row = mysql_fetch_array($result)) {
-			array_push($matches, $row["id_clothes1"]);
-		}
-	}
-	// Query SELECT, get matching clothes
-	$matches = implode(",",array_unique($matches));
-	$query = "SELECT id, photo, category, owner FROM clothes WHERE id IN ($matches)";
-	$result = mysql_query($query,$db);
+
+	// Query SELECT matching clothes by id
+	$query = "SELECT * FROM clothes WHERE id IN (SELECT DISTINCT id_clothes2 FROM matches WHERE id_clothes1 = $id)";
+	
+	// Performance measurement
+	fwrite($file, "Function: delete clothes\n");
+	$start = microtime(true); // Start timer
+	$result = mysql_query($query,$db); // Execute query
+	$time_elapsed = microtime(true) - $start; // End timer
+	fwrite($file, "Execution time: ".$time_elapsed." microsecond\n");
+	fwrite($file, "Memory usage: ".memory_usage($result)." byte\n");
+	fwrite($file, date("Y-m-d h:m:s",time()));
+	fwrite($file, "\n\n");
+	
 	// Push data
 	if($result) {
 		while($row = mysql_fetch_array($result)) {
@@ -50,14 +52,25 @@ if($_SESSION['db_mode']=="MySQL") {
 			));
 		}
 	} else {
-		error_log('Wardrobe: query select matches returns no result in '.__FILE__);
+		$error_message = 1;
 	}
 
 // Neo4j
 } else if($_SESSION['db_mode']=="Neo4j") {
-	// Query SELECT get matches
+	
+	// Query SELECT matching clothes by id
 	$query = "MATCH (n:Clothes)-[:MATCH]->(m:Clothes) WHERE n.name = '$id' RETURN m";
-	$response = $client->sendCypherQuery($query)->getRows();
+	
+	// Performance measurement
+	fwrite($file, "Function: delete clothes\n");
+	$start = microtime(true); // Start timer
+	$response = $client->sendCypherQuery($query)->getRows(); // Execute query
+	$time_elapsed = microtime(true) - $start; // End timer
+	fwrite($file, "Execution time: ".$time_elapsed." microsecond\n");
+	fwrite($file, "Memory usage: ".memory_usage($response)." byte\n");
+	fwrite($file, date("Y-m-d h:m:s",time()));
+	fwrite($file, "\n\n");
+	
 	if(!empty($response)) {
 		$clothes_all = $response['m'];
 		for($i=0;$i<sizeof($clothes_all);$i++) {
@@ -77,8 +90,17 @@ if($_SESSION['db_mode']=="MySQL") {
 			));
 		}
 	} else {
-		error_log('Wardrobe: query select matches returns no result in '.__FILE__);
+		$error_message = 1;
 	}
+}
+
+// Error message
+switch ($error_message) {
+	case 1:
+		error_log('Wardrobe '.__FILE__.' : query select matches returns no result');
+		break;
+	default:
+		break;
 }
 
 // Output dalam JSON
